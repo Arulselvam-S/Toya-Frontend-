@@ -1,0 +1,197 @@
+
+/* ======================================
+   TOYA COMMON CARD
+   Premium Aqua Glassmorphism
+   ====================================== */
+
+.toya-common-card {
+  position: relative;
+  overflow: hidden;
+
+  padding: 25px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.95);
+
+  box-shadow:
+    0 12px 35px rgba(24, 107, 165, 0.08);
+
+  transition:
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.toya-common-card:hover {
+  border-color: rgba(8, 121, 237, 0.2);
+
+  box-shadow:
+    0 20px 45px rgba(24, 107, 165, 0.13);
+}
+
+/* Decorative glass highlight */
+
+.toya-common-card::before {
+  content: "";
+  position: absolute;
+
+  width: 150px;
+  height: 150px;
+
+  right: -75px;
+  top: -75px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(56, 189, 248, 0.13),
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+.toya-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.toya-card-title {
+  color: #64809c;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+
+.toya-card-subtitle {
+  margin-top: 5px !important;
+  color: #8ba2b6;
+  font-size: 12px !important;
+}
+
+.toya-card-icon {
+  width: 46px;
+  height: 46px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 14px;
+
+  color: #0879ed;
+  background: #e5f4ff;
+}
+
+.toya-card-value {
+  margin-top: 18px !important;
+
+  color: #0b2852;
+  font-size: clamp(27px, 2.8vw, 36px) !important;
+  font-weight: 800 !important;
+  letter-spacing: -1px;
+}
+
+.toya-card-trend-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+
+  margin-top: 12px;
+}
+
+.toya-card-trend {
+  padding: 4px 9px;
+
+  border-radius: 8px;
+
+  font-size: 12px !important;
+  font-weight: 700 !important;
+}
+
+.toya-card-trend.positive {
+  color: #07865c;
+  background: #e2f8ee;
+}
+
+.toya-card-trend.negative {
+  color: #dc2626;
+  background: #feecec;
+}
+
+.toya-card-trend-label {
+  font-size: 12px !important;
+  color: #879aaf;
+}
+
+.toya-card-content {
+  margin-top: 18px;
+}
+
+.toya-common-card[role="button"] {
+  cursor: pointer;
+}
+
+.toya-common-card[role="button"]:focus-visible {
+  outline: 3px solid #38bdf8;
+  outline-offset: 3px;
+}
+
+/* Card variants */
+
+.toya-card-default {
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.toya-card-aqua {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(234, 247, 255, 0.95),
+      rgba(255, 255, 255, 0.86)
+    );
+}
+
+.toya-card-highlight {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(8, 121, 237, 0.94),
+      rgba(40, 174, 245, 0.9)
+    );
+
+  color: #ffffff;
+}
+
+.toya-card-highlight .toya-card-title,
+.toya-card-highlight .toya-card-subtitle,
+.toya-card-highlight .toya-card-value,
+.toya-card-highlight .toya-card-trend-label {
+  color: #ffffff;
+}
+
+.toya-card-highlight .toya-card-icon {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 600px) {
+  .toya-common-card {
+    padding: 20px;
+    border-radius: 17px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toya-common-card {
+    transition: none;
+  }
+}

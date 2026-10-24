@@ -1,0 +1,385 @@
+
+/* ==========================================
+   TOYA ADMIN — DAILY WORK LOGS
+   ========================================== */
+
+.toya-worklogs-page {
+  width: 100%;
+  min-width: 0;
+  padding: 8px 0 40px;
+  color: #0b2852;
+  box-sizing: border-box;
+}
+
+.toya-worklogs-page *,
+.toya-worklogs-page *::before,
+.toya-worklogs-page *::after {
+  box-sizing: border-box;
+}
+
+/* Header */
+
+.toya-worklogs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.toya-worklogs-title {
+  color: #0b2852;
+  font-size: 28px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.6px;
+}
+
+.toya-worklogs-subtitle {
+  margin-top: 6px !important;
+  color: #8198ac;
+  font-size: 13px !important;
+}
+
+.toya-worklogs-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+
+.toya-worklogs-page .MuiButton-root {
+  min-height: 40px;
+  border-radius: 10px;
+  padding: 8px 15px;
+  font-weight: 700;
+  text-transform: none;
+}
+
+.toya-worklogs-page .MuiButton-contained {
+  background: linear-gradient(135deg, #0879ed, #38bdf8);
+  box-shadow: 0 5px 14px rgba(8, 121, 237, 0.16);
+}
+
+.toya-worklogs-page .MuiButton-contained:hover {
+  background: linear-gradient(135deg, #0668ce, #16a9ed);
+}
+
+/* Error alert */
+
+.toya-worklogs-page > .MuiAlert-root {
+  margin-bottom: 18px;
+  border-radius: 12px;
+  font-size: 13px;
+}
+
+/* Summary cards grid */
+
+.toya-worklogs-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.toya-worklogs-stat {
+  min-width: 0;
+  padding: 22px;
+  background: #fff;
+  border: 1px solid #e7f0f8;
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(8, 80, 150, 0.055);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.toya-worklogs-stat:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(8, 80, 150, 0.09);
+}
+
+.toya-worklogs-stat-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.toya-worklogs-stat-label {
+  color: #8198ac;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+
+.toya-worklogs-stat-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #e5f4ff;
+  color: #0879ed;
+}
+
+.toya-worklogs-stat-value {
+  margin-top: 12px !important;
+  color: #0b2852;
+  font-size: 29px !important;
+  font-weight: 800 !important;
+  line-height: 1.3 !important;
+  overflow-wrap: anywhere;
+}
+
+.toya-worklogs-stat-description {
+  display: block;
+  margin-top: 6px !important;
+  color: #8198ac;
+  font-size: 11px !important;
+}
+
+/* Filter panel */
+
+.toya-worklogs-filter-panel {
+  padding: 22px;
+  margin-bottom: 24px;
+  background: #fff;
+  border: 1px solid #e7f0f8;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(8, 80, 150, 0.035);
+}
+
+.toya-worklogs-filter-title {
+  margin-bottom: 17px !important;
+  color: #173b61;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+}
+
+.toya-worklogs-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.toya-worklogs-page .MuiTextField-root {
+  min-width: 0;
+}
+
+.toya-worklogs-page .MuiOutlinedInput-root {
+  background: #f9fcff;
+  border-radius: 11px;
+  font-size: 13px;
+}
+
+.toya-worklogs-page .MuiOutlinedInput-notchedOutline {
+  border-color: #e1ebf4;
+}
+
+.toya-worklogs-page .MuiOutlinedInput-root:hover
+.MuiOutlinedInput-notchedOutline {
+  border-color: #9cccf5;
+}
+
+.toya-worklogs-page .MuiOutlinedInput-root.Mui-focused
+.MuiOutlinedInput-notchedOutline {
+  border-color: #0879ed;
+  border-width: 1.5px;
+}
+
+.toya-worklogs-page .MuiInputLabel-root {
+  color: #7189a0;
+  font-size: 13px;
+}
+
+.toya-worklogs-filter-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+/* Table panel */
+
+.toya-worklogs-table-panel {
+  min-width: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e7f0f8;
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(8, 80, 150, 0.05);
+}
+
+.toya-worklogs-table-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 21px 23px;
+  border-bottom: 1px solid #edf3f8;
+}
+
+.toya-worklogs-table-heading h6 {
+  color: #0b2852;
+  font-weight: 800;
+}
+
+.toya-worklogs-table-heading .MuiTypography-root {
+  overflow-wrap: anywhere;
+}
+
+/* CommonTable compatibility */
+
+.toya-worklogs-page .toyo-table-card {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+.toya-worklogs-page .MuiTableContainer-root {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.toya-worklogs-page .MuiTableHead-root .MuiTableCell-root {
+  padding: 14px 18px;
+  color: #7189a0;
+  background: #f7fbff;
+  border-bottom: 1px solid #e7f0f8;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.55px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.toya-worklogs-page .MuiTableBody-root .MuiTableCell-root {
+  padding: 15px 18px;
+  color: #385873;
+  border-bottom: 1px solid #edf3f8;
+  font-size: 12px;
+}
+
+.toya-worklogs-page .MuiTableBody-root .MuiTableRow-root {
+  transition: background 0.18s ease;
+}
+
+.toya-worklogs-page .MuiTableBody-root .MuiTableRow-root:hover {
+  background: #f8fbff;
+}
+
+.toya-worklogs-page .MuiTableBody-root .MuiTableRow-root:last-child
+.MuiTableCell-root {
+  border-bottom: 0;
+}
+
+.toya-worklogs-page .MuiChip-root {
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* Pagination */
+
+.toya-worklogs-page .MuiTablePagination-root {
+  color: #7189a0;
+  border-top: 1px solid #edf3f8;
+  font-size: 12px;
+}
+
+.toya-worklogs-page .MuiTablePagination-selectLabel,
+.toya-worklogs-page .MuiTablePagination-displayedRows {
+  font-size: 11px;
+}
+
+/* Loading state */
+
+.toya-worklogs-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-height: 240px;
+  color: #8198ac;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+  .toya-worklogs-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .toya-worklogs-filter-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .toya-worklogs-header {
+    align-items: flex-start;
+  }
+
+  .toya-worklogs-title {
+    font-size: 23px !important;
+  }
+
+  .toya-worklogs-header-actions {
+    width: 100%;
+  }
+
+  .toya-worklogs-stats {
+    gap: 12px;
+  }
+
+  .toya-worklogs-stat {
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  .toya-worklogs-stat-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .toya-worklogs-stat-value {
+    font-size: 24px !important;
+  }
+
+  .toya-worklogs-filter-panel {
+    padding: 15px;
+  }
+
+  .toya-worklogs-filter-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .toya-worklogs-table-heading {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 380px) {
+  .toya-worklogs-stats {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .toya-worklogs-header-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toya-worklogs-stat {
+    transition: none;
+  }
+
+  .toya-worklogs-stat:hover {
+    transform: none;
+  }
+}

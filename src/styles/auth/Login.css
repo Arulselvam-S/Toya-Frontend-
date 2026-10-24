@@ -1,0 +1,220 @@
+
+/* TOYA Demo Login */
+
+.toya-login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(56, 189, 248, 0.22),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(8, 121, 237, 0.12),
+      transparent 35%
+    ),
+    #f4faff;
+}
+
+.toya-login-card {
+  width: 100%;
+  max-width: 480px;
+  padding: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 24px 80px rgba(8, 80, 150, 0.11);
+}
+
+.toya-login-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 29px;
+}
+
+.toya-login-logo {
+  display: grid;
+  place-items: center;
+  width: 47px;
+  height: 47px;
+  border-radius: 15px;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    #0879ed,
+    #38bdf8
+  );
+}
+
+.toya-login-brand-name {
+  font-size: 25px !important;
+  font-weight: 900 !important;
+  letter-spacing: 1.5px;
+  color: #0b2852;
+}
+
+.toya-login-title {
+  font-size: 26px !important;
+  font-weight: 850 !important;
+  color: #0b2852;
+}
+
+.toya-login-subtitle {
+  margin-top: 8px !important;
+  color: #728ba4;
+  font-size: 13px !important;
+  line-height: 1.7 !important;
+}
+
+.toya-login-role-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-top: 9px;
+}
+
+.toya-login-role {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 13px;
+  padding: 16px;
+  border: 1.5px solid #e4edf6;
+  border-radius: 15px;
+  background: #fff;
+  color: #0b2852;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.toya-login-role:hover {
+  border-color: #7dc6fa;
+  transform: translateY(-1px);
+}
+
+.toya-login-role.selected {
+  border-color: #0879ed;
+  background: #f0f8ff;
+}
+
+.toya-login-role:focus-visible {
+  outline: 3px solid #89cafa;
+  outline-offset: 2px;
+}
+
+.toya-login-role-icon {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  color: #0879ed;
+  background: #e4f3ff;
+}
+
+.toya-login-role-text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.toya-login-role-text strong {
+  font-size: 14px;
+}
+
+.toya-login-role-text span {
+  font-size: 11px;
+  color: #7e92a7;
+  line-height: 1.4;
+}
+
+.toya-login-radio {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  border: 2px solid #bbcbda;
+  border-radius: 50%;
+}
+
+.toya-login-role.selected .toya-login-radio {
+  border: 5px solid #0879ed;
+}
+
+.toya-login-submit {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.toya-login-submit button {
+  width: 100%;
+  min-height: 45px;
+}
+
+.toya-login-footnote {
+  margin-top: 19px !important;
+  color: #91a4b6;
+  font-size: 11px !important;
+  text-align: center;
+  line-height: 1.6 !important;
+}
+
+@media (max-width: 550px) {
+  .toya-login-page {
+    padding: 14px;
+  }
+
+  .toya-login-card {
+    padding: 23px;
+    border-radius: 19px;
+  }
+
+  .toya-login-title {
+    font-size: 23px !important;
+  }
+
+  .toya-login-role {
+    padding: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toya-login-role {
+    transition: none;
+  }
+
+  .toya-login-role:hover {
+    transform: none;
+  }
+}
+
+.toya-login-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto 22px;
+}
+
+.toya-login-logo-image {
+  display: block;
+  width: min(280px, 100%);
+  max-height: 145px;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}

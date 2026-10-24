@@ -1,0 +1,88 @@
+
+/* =======================================
+   TOYA COMMON SEARCH
+   Premium Aqua Glassmorphism
+   ======================================= */
+
+.toya-search-wrapper {
+  width: 320px;
+  max-width: 100%;
+}
+
+.toya-common-search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  width: 100%;
+  min-height: 48px;
+
+  padding: 8px 14px;
+
+  border-radius: 13px;
+
+  background: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(16px);
+
+  border: 1px solid #d9eaf7;
+
+  box-shadow:
+    0 5px 18px rgba(8, 121, 237, 0.04);
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.toya-common-search:hover {
+  background: #ffffff;
+  border-color: #a9d8f8;
+}
+
+.toya-search-focused {
+  background: #ffffff;
+
+  border-color: #0879ed;
+
+  box-shadow:
+    0 0 0 4px rgba(8, 121, 237, 0.08),
+    0 8px 22px rgba(8, 121, 237, 0.07);
+}
+
+.toya-search-icon {
+  color: #64809c;
+  flex-shrink: 0;
+}
+
+.toya-search-focused .toya-search-icon {
+  color: #0879ed;
+}
+
+.toya-common-search .MuiInputBase-input {
+  font-size: 14px;
+  color: #0b2852;
+}
+
+.toya-common-search .MuiInputBase-input::placeholder {
+  color: #8ba4b8;
+  opacity: 1;
+}
+
+.toya-search-disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: #eff4f8;
+}
+
+@media (max-width: 600px) {
+  .toya-search-wrapper {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toya-common-search {
+    transition: none;
+  }
+}

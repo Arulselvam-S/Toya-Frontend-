@@ -1,0 +1,696 @@
+
+/* ==========================================
+   TOYA ADMIN — WEEKLY REPORTS
+   ========================================== */
+
+.toya-admin-work-reports {
+  width: 100%;
+  min-width: 0;
+  padding: 8px 0 40px;
+  color: #0b2852;
+  box-sizing: border-box;
+}
+
+.toya-admin-work-reports *,
+.toya-admin-work-reports *::before,
+.toya-admin-work-reports *::after {
+  box-sizing: border-box;
+}
+
+/* Header */
+
+.tawr-header {
+  display: flex; 
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.tawr-title {
+  color: #0b2852;
+  font-size: 28px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.7px;
+}
+
+.tawr-subtitle {
+  color: #8198ac;
+  font-size: 13px !important;
+  margin-top: 6px !important;
+}
+
+.tawr-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tawr-header-actions .MuiButton-root {
+  min-height: 42px;
+  border-radius: 11px;
+  padding: 9px 16px;
+  font-weight: 700;
+  text-transform: none;
+}
+
+.tawr-header-actions .MuiButton-contained {
+  background: linear-gradient(135deg, #0879ed, #38bdf8);
+  box-shadow: 0 5px 14px rgba(8, 121, 237, 0.17);
+}
+
+.tawr-header-actions .MuiButton-contained:hover {
+  background: linear-gradient(135deg, #0668ce, #16a9ed);
+}
+
+/* Alerts */
+
+.toya-admin-work-reports > .MuiAlert-root {
+  margin-bottom: 16px;
+  border-radius: 12px;
+  font-size: 13px;
+}
+
+/* Summary cards */
+
+.tawr-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.tawr-stat {
+  min-width: 0;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid #eaf2f9;
+  border-radius: 18px;
+  box-shadow: 0 9px 28px rgba(8, 80, 150, 0.055);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tawr-stat:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(8, 80, 150, 0.09);
+}
+
+.tawr-stat-icon {
+  display: grid;
+  place-items: center;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 15px;
+  border-radius: 13px;
+  background: #e5f4ff;
+  color: #0879ed;
+}
+
+.tawr-stat-icon.cyan {
+  background: #e3f9fc;
+  color: #099eb0;
+}
+
+.tawr-stat-icon.orange {
+  background: #fff3dd;
+  color: #ca8918;
+}
+
+.tawr-stat-icon.green {
+  background: #def8ed;
+  color: #0e9668;
+}
+
+.tawr-stat-value {
+  color: #0b2852;
+  font-size: 29px !important;
+  font-weight: 800 !important;
+  line-height: 1.3 !important;
+  overflow-wrap: anywhere;
+}
+
+.tawr-stat-label {
+  margin-top: 7px !important;
+  color: #8198ac;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+
+/* Filters */
+
+.tawr-filters {
+  display: grid;
+  grid-template-columns:
+    minmax(180px, 1.4fr)
+    minmax(150px, 1fr)
+    minmax(145px, 1fr)
+    minmax(155px, 1fr)
+    auto;
+  align-items: center;
+  gap: 13px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: #fff;
+  border: 1px solid #eaf2f9;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(8, 80, 150, 0.035);
+}
+
+.tawr-filters .MuiOutlinedInput-root {
+  min-height: 43px;
+  background: #f9fcff;
+  border-radius: 11px;
+  font-size: 13px;
+}
+
+.tawr-filters .MuiOutlinedInput-notchedOutline {
+  border-color: #e1ebf4;
+}
+
+.tawr-filters .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #9cccf5;
+}
+
+.tawr-filters .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #0879ed;
+  border-width: 1.5px;
+}
+
+.tawr-filters .MuiInputLabel-root {
+  color: #7189a0;
+  font-size: 13px;
+}
+
+.tawr-filters .MuiButton-root {
+  min-height: 42px;
+  border-radius: 10px;
+  padding: 8px 15px;
+  text-transform: none;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Main report panel */
+
+.tawr-panel {
+  min-width: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #eaf2f9;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(8, 80, 150, 0.05);
+}
+
+.tawr-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 22px 24px;
+  border-bottom: 1px solid #edf3f8;
+}
+
+.tawr-panel-header .MuiChip-root {
+  border-color: #d8e9f8;
+  color: #0879ed;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+/* Responsive table wrapper */
+
+.tawr-table-scroll {
+  width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #c7dced transparent;
+}
+
+.tawr-table-scroll::-webkit-scrollbar {
+  height: 7px;
+}
+
+.tawr-table-scroll::-webkit-scrollbar-thumb {
+  background: #c7dced;
+  border-radius: 10px;
+}
+
+.tawr-table-head,
+.tawr-table-row {
+  display: grid;
+  grid-template-columns:
+    minmax(175px, 1.25fr)
+    minmax(190px, 1.5fr)
+    minmax(100px, 0.8fr)
+    minmax(100px, 0.75fr)
+    minmax(115px, 0.85fr)
+    minmax(85px, 0.6fr);
+  align-items: center;
+  gap: 15px;
+  min-width: 920px;
+}
+
+.tawr-table-head {
+  padding: 14px 24px;
+  background: #f7fbff;
+  border-bottom: 1px solid #edf3f8;
+}
+
+.tawr-table-head span {
+  color: #7891a8;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.65px;
+  text-transform: uppercase;
+}
+
+.tawr-table-row {
+  padding: 17px 24px;
+  border-bottom: 1px solid #edf3f8;
+  transition: background 0.18s ease;
+}
+
+.tawr-table-row:last-of-type {
+  border-bottom: none;
+}
+
+.tawr-table-row:hover {
+  background: #f9fcff;
+}
+
+.tawr-table-row > * {
+  min-width: 0;
+}
+
+/* Employee identity */
+
+.tawr-employee {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+}
+
+.tawr-avatar {
+  width: 39px !important;
+  height: 39px !important;
+  flex: 0 0 39px;
+  background: #e4f3ff !important;
+  color: #0879ed !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+}
+
+.tawr-employee .MuiTypography-root {
+  overflow-wrap: anywhere;
+}
+
+/* Work description */
+
+.tawr-work-title {
+  color: #173b61;
+  line-height: 1.45 !important;
+  overflow-wrap: anywhere;
+}
+
+.tawr-description {
+  display: -webkit-box;
+  overflow: hidden;
+  margin-top: 5px !important;
+  line-height: 1.5 !important;
+  overflow-wrap: anywhere;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/* Attendance chip */
+
+.tawr-table-row .MuiChip-root {
+  max-width: 100%;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* View action */
+
+.tawr-table-row .MuiButton-root {
+  min-width: 76px;
+  border-radius: 9px;
+  text-transform: none;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Empty state */
+
+.tawr-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 230px;
+  padding: 30px 20px;
+  color: #8aa3b8;
+  text-align: center;
+}
+
+.tawr-empty > svg {
+  color: #9dc9ec;
+}
+
+.tawr-empty .MuiTypography-root:first-of-type {
+  color: #173b61;
+}
+
+.tawr-updated {
+  margin-top: 15px !important;
+  color: #8198ac;
+  font-size: 11px !important;
+  text-align: right;
+}
+
+/* Details dialog */
+
+.tawr-dialog-paper {
+  overflow: hidden;
+  border: 1px solid #e4eef7;
+  border-radius: 20px !important;
+  box-shadow: 0 24px 70px rgba(11, 40, 82, 0.18) !important;
+}
+
+.tawr-dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 20px 24px !important;
+  background: #f7fbff;
+  border-bottom: 1px solid #eaf2f9;
+}
+
+.tawr-dialog-header .MuiIconButton-root {
+  color: #597892;
+  border-radius: 10px;
+}
+
+.tawr-dialog-header .MuiIconButton-root:hover {
+  background: #e8f3fc;
+  color: #0879ed;
+}
+
+.tawr-dialog-paper .MuiDialogContent-root {
+  padding: 22px 24px;
+}
+
+.tawr-detail-person {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #edf3f8;
+}
+
+.tawr-detail-person .tawr-avatar {
+  width: 47px !important;
+  height: 47px !important;
+  flex-basis: 47px;
+  font-size: 17px !important;
+}
+
+.tawr-detail-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+  margin-top: 20px;
+}
+
+.tawr-detail-section > span {
+  color: #8198ac;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+}
+
+.tawr-detail-section > strong {
+  color: #0b2852;
+  font-size: 15px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.tawr-detail-section .MuiChip-root {
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.tawr-detail-description {
+  width: 100%;
+  padding: 13px 15px;
+  color: #496781;
+  background: #f7fbff;
+  border: 1px solid #e8f1f8;
+  border-radius: 11px;
+  font-size: 13px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.tawr-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.tawr-detail-grid > div {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+  padding: 15px;
+  background: #f7fbff;
+  border: 1px solid #e6f0f8;
+  border-radius: 12px;
+}
+
+.tawr-detail-grid span {
+  color: #8198ac;
+  font-size: 11px;
+}
+
+.tawr-detail-grid strong {
+  color: #0b2852;
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+
+.tawr-dialog-paper .MuiAlert-root {
+  border-radius: 11px;
+  font-size: 12px;
+}
+
+.tawr-submitted {
+  margin-top: 20px;
+  padding-top: 15px;
+  color: #8198ac;
+  border-top: 1px solid #edf3f8;
+  font-size: 11px;
+}
+
+.tawr-dialog-actions {
+  padding: 15px 24px 20px !important;
+  border-top: 1px solid #edf3f8;
+}
+
+.tawr-dialog-actions .MuiButton-root {
+  min-width: 90px;
+  border-radius: 10px;
+  text-transform: none;
+  font-weight: 700;
+}
+
+/* Responsive: laptops and tablets */
+
+@media (max-width: 1300px) {
+  .tawr-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tawr-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tawr-filters > .MuiButton-root {
+    justify-self: start;
+  }
+}
+
+@media (max-width: 900px) {
+  .tawr-header {
+    align-items: flex-start;
+  }
+
+  .tawr-title {
+    font-size: 24px !important;
+  }
+
+  .tawr-panel-header {
+    padding: 18px;
+  }
+
+  .tawr-table-head,
+  .tawr-table-row {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+}
+
+/* Responsive: mobile */
+
+@media (max-width: 600px) {
+  .toya-admin-work-reports {
+    padding-top: 2px;
+    padding-bottom: 24px;
+  }
+
+  .tawr-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .tawr-title {
+    font-size: 22px !important;
+  }
+
+  .tawr-subtitle {
+    font-size: 12px !important;
+  }
+
+  .tawr-header-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tawr-header-actions .MuiButton-root {
+    min-width: 0;
+    padding: 8px;
+    font-size: 11px;
+  }
+
+  .tawr-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 11px;
+    margin-bottom: 18px;
+  }
+
+  .tawr-stat {
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  .tawr-stat-icon {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 12px;
+  }
+
+  .tawr-stat-value {
+    font-size: 24px !important;
+  }
+
+  .tawr-stat-label {
+    font-size: 11px !important;
+    line-height: 1.5 !important;
+  }
+
+  .tawr-filters {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    padding: 14px;
+    margin-bottom: 17px;
+    border-radius: 15px;
+  }
+
+  .tawr-filters > .MuiButton-root {
+    width: 100%;
+  }
+
+  .tawr-panel {
+    border-radius: 15px;
+  }
+
+  .tawr-panel-header {
+    padding: 15px;
+  }
+
+  .tawr-panel-header .MuiTypography-root:first-child {
+    font-size: 14px;
+  }
+
+  .tawr-table-head,
+  .tawr-table-row {
+    min-width: 900px;
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .tawr-updated {
+    font-size: 10px !important;
+  }
+
+  .tawr-dialog-header {
+    padding: 16px !important;
+  }
+
+  .tawr-dialog-paper .MuiDialogContent-root {
+    padding: 16px;
+  }
+
+  .tawr-detail-grid {
+    gap: 9px;
+  }
+
+  .tawr-detail-grid > div {
+    padding: 12px;
+  }
+
+  .tawr-dialog-actions {
+    padding: 12px 16px 16px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .tawr-stats {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tawr-header-actions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tawr-detail-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .tawr-stat {
+    transition: none;
+  }
+
+  .tawr-stat:hover {
+    transform: none;
+  }
+}

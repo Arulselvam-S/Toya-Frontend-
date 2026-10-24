@@ -1,0 +1,431 @@
+/* =========================================================
+   TOYA MANAGER DASHBOARD — AQUA GLASS THEME
+   File: src/styles/manager/ManagerDashboard.css
+   ========================================================= */
+
+.toya-manager-page {
+  --manager-primary: #0879ed;
+  --manager-navy: #102c55;
+  --manager-muted: #7186a3;
+  --manager-border: #e1ebf5;
+  --manager-aqua: #e8f7ff;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 100%;
+  padding: 26px;
+  color: var(--manager-navy);
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(103, 209, 240, 0.12),
+      transparent 34%
+    ),
+    #f4f8fd;
+  box-sizing: border-box;
+}
+
+.toya-manager-page *,
+.toya-manager-page *::before,
+.toya-manager-page *::after {
+  box-sizing: border-box;
+}
+
+/* Page heading */
+
+.toya-manager-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+.toya-manager-title {
+  color: var(--manager-navy);
+  font-size: clamp(24px, 2.2vw, 32px) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.7px !important;
+  line-height: 1.3 !important;
+}
+
+.toya-manager-subtitle {
+  margin-top: 6px !important;
+  color: var(--manager-muted);
+  font-size: 13px !important;
+  line-height: 1.7 !important;
+}
+
+.toya-manager-heading .MuiChip-root {
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+/* Summary metric cards */
+
+.toya-manager-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.toya-manager-stat {
+  position: relative;
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  align-items: center;
+  column-gap: 15px;
+  min-width: 0;
+  padding: 22px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(220, 234, 247, 0.95);
+  border-radius: 19px;
+  box-shadow: 0 9px 30px rgba(27, 72, 118, 0.045);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.toya-manager-stat::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 75px;
+  height: 75px;
+  background: linear-gradient(
+    135deg,
+    rgba(105, 204, 241, 0.10),
+    transparent
+  );
+  border-radius: 0 0 0 100%;
+  content: "";
+  pointer-events: none;
+}
+
+.toya-manager-stat:hover {
+  transform: translateY(-3px);
+  border-color: #c9e2f8;
+  box-shadow: 0 15px 34px rgba(27, 72, 118, 0.085);
+}
+
+.toya-manager-stat-icon {
+  grid-row: 1 / 3;
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(221, 236, 249, 0.8);
+  border-radius: 16px;
+}
+
+.toya-manager-stat-value {
+  min-width: 0;
+  color: var(--manager-navy);
+  font-size: clamp(25px, 2.1vw, 34px) !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  overflow-wrap: anywhere;
+}
+
+.toya-manager-stat-label {
+  margin-top: 5px !important;
+  color: var(--manager-muted);
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+}
+
+/* Main content grid */
+
+.toya-manager-content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+  margin-bottom: 24px;
+}
+
+.toya-manager-panel {
+  min-width: 0;
+  padding: 23px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--manager-border);
+  border-radius: 20px;
+  box-shadow: 0 10px 32px rgba(27, 72, 118, 0.045);
+  transition: box-shadow 180ms ease;
+}
+
+.toya-manager-panel:hover {
+  box-shadow: 0 13px 35px rgba(27, 72, 118, 0.065);
+}
+
+.toya-manager-panel-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #edf2f8;
+}
+
+.toya-manager-panel-heading > .MuiBox-root > .MuiTypography-root:first-child,
+.toya-manager-panel-heading > .MuiTypography-root:first-child {
+  color: var(--manager-navy);
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.toya-manager-panel-heading .MuiTypography-body2 {
+  margin-top: 5px;
+  color: var(--manager-muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Attendance score */
+
+.toya-manager-attendance-score {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 23px;
+  background: linear-gradient(135deg, #f0f8ff, #f9fcff);
+  border: 1px solid #e3effb;
+  border-radius: 16px;
+}
+
+.toya-manager-attendance-score > .MuiTypography-root:first-child {
+  color: var(--manager-navy);
+  letter-spacing: -1px;
+}
+
+.toya-manager-attendance-score .MuiLinearProgress-root {
+  height: 9px;
+  overflow: hidden;
+  background: #dfebf6;
+  border-radius: 20px;
+}
+
+.toya-manager-attendance-score .MuiLinearProgress-bar {
+  background: linear-gradient(90deg, #0879ed, #55c9e8);
+  border-radius: 20px;
+}
+
+/* Panel action buttons */
+
+.toya-manager-panel button:not(.MuiButtonBase-root) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-height: 39px;
+  padding: 9px 15px;
+  color: #0879ed;
+  background: #f5faff;
+  border: 1px solid #d6e8fa;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.toya-manager-panel button:not(.MuiButtonBase-root):hover {
+  background: #eaf5ff;
+  border-color: #9fc9f3;
+}
+
+.toya-manager-panel button:not(.MuiButtonBase-root):active {
+  transform: scale(0.98);
+}
+
+.toya-manager-panel button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* Task overview */
+
+.toya-manager-panel .MuiAlert-root {
+  border-radius: 12px;
+}
+
+/* Attendance table */
+
+.toya-manager-panel table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.toya-manager-panel thead th {
+  padding: 15px 12px;
+  color: #7186a3;
+  background: #f5f9fe;
+  border-bottom: 1px solid #dce8f4;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.toya-manager-panel tbody td {
+  padding: 16px 12px;
+  color: #385b7e;
+  border-bottom: 1px solid #e8eff7;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.toya-manager-panel tbody tr {
+  transition: background 150ms ease;
+}
+
+.toya-manager-panel tbody tr:hover {
+  background: #f5faff;
+}
+
+.toya-manager-panel tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.toya-manager-panel tbody .MuiAvatar-root {
+  flex-shrink: 0;
+  color: #0879ed;
+  background: #e5f3ff;
+  border: 1px solid #d9eaff;
+  font-weight: 800;
+}
+
+.toya-manager-panel tbody .MuiChip-root {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* Scrollable table wrapper */
+
+.toya-manager-panel > .MuiBox-root[style*="overflow"] {
+  max-width: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: #b8cde1 #f3f8fd;
+}
+
+/* Loading indicator */
+
+.toya-manager-page .MuiCircularProgress-root {
+  color: var(--manager-primary);
+}
+
+.toya-manager-page .MuiAlert-root {
+  border-radius: 12px;
+}
+
+/* Responsive layout */
+
+@media (max-width: 1200px) {
+  .toya-manager-page {
+    padding: 22px;
+  }
+
+  .toya-manager-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .toya-manager-content-grid {
+    gap: 16px;
+  }
+
+  .toya-manager-panel {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 850px) {
+  .toya-manager-content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .toya-manager-panel {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .toya-manager-page {
+    padding: 14px;
+  }
+
+  .toya-manager-heading {
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .toya-manager-title {
+    font-size: 24px !important;
+  }
+
+  .toya-manager-stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .toya-manager-stat {
+    padding: 17px;
+    border-radius: 15px;
+  }
+
+  .toya-manager-stat-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .toya-manager-content-grid {
+    gap: 15px;
+    margin-bottom: 18px;
+  }
+
+  .toya-manager-panel {
+    padding: 15px;
+    border-radius: 16px;
+  }
+
+  .toya-manager-panel-heading {
+    margin-bottom: 15px;
+  }
+
+  .toya-manager-attendance-score {
+    padding: 17px;
+  }
+
+  .toya-manager-panel > .MuiBox-root[style*="overflow"] {
+    overflow-x: auto;
+  }
+
+  .toya-manager-panel table {
+    min-width: 560px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toya-manager-stat,
+  .toya-manager-panel,
+  .toya-manager-panel tbody tr {
+    transition: none;
+  }
+
+  .toya-manager-stat:hover {
+    transform: none;
+  }
+}

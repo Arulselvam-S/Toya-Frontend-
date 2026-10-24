@@ -1,0 +1,405 @@
+
+/* ==========================================
+   TOYA ATTENDANCE MANAGEMENT
+   COMPLETE RESPONSIVE CSS
+   ========================================== */
+
+.toya-att-page {
+  width: 100%;
+  min-width: 0;
+  padding-bottom: 36px;
+}
+
+/* PAGE HEADER */
+
+.toya-att-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 26px;
+}
+
+.toya-att-title {
+  color: #0b2852;
+  font-size: 27px !important;
+  font-weight: 800 !important;
+}
+
+.toya-att-subtitle {
+  margin-top: 6px !important;
+  color: #8198ac;
+  font-size: 13px !important;
+}
+
+/* STATISTICS */
+
+.toya-att-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 17px;
+  margin-bottom: 23px;
+}
+
+.toya-att-stat-card {
+  min-width: 0;
+  padding: 21px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #ffffff;
+  box-shadow: 0 10px 30px rgba(8, 80, 150, 0.06);
+}
+
+.toya-att-stat-icon {
+  display: grid;
+  place-items: center;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 16px;
+  border-radius: 13px;
+  background: #e5f4ff;
+  color: #0879ed;
+}
+
+.toya-att-stat-card.tone-green .toya-att-stat-icon {
+  color: #0f996f;
+  background: #ddf7eb;
+}
+
+.toya-att-stat-card.tone-red .toya-att-stat-icon {
+  color: #df5360;
+  background: #ffedf0;
+}
+
+.toya-att-stat-card.tone-orange .toya-att-stat-icon {
+  color: #c98918;
+  background: #fff4df;
+}
+
+.toya-att-stat-value {
+  color: #0b2852;
+  font-size: 31px !important;
+  font-weight: 800 !important;
+}
+
+.toya-att-stat-label {
+  margin-top: 8px !important;
+  color: #8299ad;
+  font-size: 12px !important;
+}
+
+/* ATTENDANCE RATE */
+
+.toya-att-rate-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 22px;
+  margin-bottom: 23px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid #eaf2f9;
+}
+
+.toya-att-rate-value {
+  color: #0879ed;
+  font-size: 29px !important;
+  font-weight: 800 !important;
+}
+
+.toya-att-rate-track {
+  flex: 1;
+  max-width: 420px;
+  height: 11px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #e6f1fb;
+}
+
+.toya-att-rate-progress {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #0879ed, #42c8f5);
+  transition: width 0.3s ease;
+}
+
+/* FILTERS */
+
+.toya-att-filter-panel {
+  display: grid;
+  grid-template-columns:
+    minmax(165px, 1fr)
+    minmax(185px, 1.3fr)
+    minmax(145px, 1fr)
+    minmax(135px, 1fr)
+    auto;
+  align-items: center;
+  gap: 14px;
+
+  padding: 20px;
+  margin-bottom: 23px;
+
+  border-radius: 18px;
+  border: 1px solid #eaf2f9;
+  background: #ffffff;
+}
+
+.toya-att-filter-panel .MuiOutlinedInput-root {
+  border-radius: 11px;
+  background: #f9fcff;
+}
+
+/* TABLE */
+
+.toya-att-table-section {
+  min-width: 0;
+  padding: 20px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(8, 80, 150, 0.05);
+}
+
+.toya-att-table-section .toyo-table-card {
+  box-shadow: none;
+  border: 0;
+  background: transparent;
+}
+
+.toya-att-employee {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.toya-att-avatar {
+  flex: 0 0 38px;
+  width: 38px !important;
+  height: 38px !important;
+  background: #e4f3ff !important;
+  color: #0879ed !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+}
+
+.toya-att-table-section .toya-pagination-wrapper {
+  padding-top: 18px;
+  border-top: 1px solid #edf3f8;
+}
+
+/* STATUS BADGES */
+
+.toya-att-status {
+  font-size: 11px !important;
+  font-weight: 750 !important;
+  border-radius: 8px !important;
+}
+
+.toya-att-status.status-present {
+  background: #dff8ed !important;
+  color: #10845e !important;
+}
+
+.toya-att-status.status-absent {
+  background: #ffeaed !important;
+  color: #d74052 !important;
+}
+
+.toya-att-status.status-leave {
+  background: #fff3dc !important;
+  color: #bb7914 !important;
+}
+
+.toya-att-status.status-not_marked {
+  background: #edf2f7 !important;
+  color: #75899c !important;
+}
+
+/* ==========================================
+   COMPACT ATTENDANCE DETAILS MODAL
+   ========================================== */
+
+.toya-att-compact-modal {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* PROFILE */
+
+.toya-att-compact-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 2px 0 16px;
+  margin-bottom: 16px;
+
+  border-bottom: 1px solid #eaf1f8;
+}
+
+.toya-att-compact-avatar {
+  width: 44px !important;
+  height: 44px !important;
+  flex: 0 0 44px;
+
+  background: linear-gradient(
+    135deg,
+    #0879ed,
+    #38bdf8
+  ) !important;
+
+  color: white !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+}
+
+.toya-att-profile-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.toya-att-compact-status {
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+/* COMPACT DETAILS */
+
+.toya-att-compact-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.toya-att-compact-row {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  padding: 12px 14px;
+  min-width: 0;
+
+  border: 1px solid #e7f0f8;
+  border-radius: 12px;
+  background: #f5faff;
+}
+
+.toya-att-compact-row span {
+  color: #8198ac;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.toya-att-compact-row strong {
+  color: #0b2852;
+  font-size: 13px;
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+
+/* ACTIONS */
+
+.toya-att-compact-actions-title {
+  color: #0b2852;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  margin-bottom: 12px !important;
+}
+
+.toya-att-compact-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.toya-att-compact-actions > * {
+  min-width: 0;
+}
+
+.toya-att-compact-actions button {
+  width: 100%;
+  min-width: 0;
+  min-height: 40px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius: 10px;
+  font-size: 12px;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1300px) {
+  .toya-att-filter-panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1000px) {
+  .toya-att-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .toya-att-title {
+    font-size: 22px !important;
+  }
+
+  .toya-att-heading {
+    align-items: flex-start;
+  }
+
+  .toya-att-stat-card {
+    padding: 15px;
+  }
+
+  .toya-att-stat-value {
+    font-size: 25px !important;
+  }
+
+  .toya-att-rate-panel {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .toya-att-rate-track {
+    width: 100%;
+    flex: none;
+  }
+
+  .toya-att-filter-panel {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+
+  .toya-att-table-section {
+    padding: 12px;
+  }
+
+  .toya-att-compact-details {
+    gap: 9px;
+  }
+
+  .toya-att-compact-row {
+    padding: 10px;
+  }
+
+  .toya-att-compact-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .toya-att-compact-profile {
+    flex-wrap: wrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toya-att-rate-progress {
+    transition: none;
+  }
+}

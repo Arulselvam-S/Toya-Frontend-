@@ -1,0 +1,83 @@
+
+/* =====================================
+   TOYA COMMON STATUS BADGE
+   Premium Status Indicators
+   ===================================== */
+
+.toya-status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  width: fit-content;
+  max-width: 100%;
+
+  padding: 6px 12px;
+  border-radius: 9px;
+
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.3;
+  white-space: nowrap;
+
+  border: 1px solid transparent;
+}
+
+.toya-status-small {
+  padding: 4px 8px;
+  font-size: 11px;
+  gap: 4px;
+}
+
+.toya-status-large {
+  padding: 9px 15px;
+  font-size: 13px;
+}
+
+/* Success */
+
+.toya-status-success {
+  background: #e3f8ee;
+  color: #087d57;
+  border-color: #bdebd5;
+}
+
+/* Warning */
+
+.toya-status-warning {
+  background: #fff4dc;
+  color: #a96600;
+  border-color: #ffe1a3;
+}
+
+/* Error */
+
+.toya-status-error {
+  background: #ffeaed;
+  color: #c72c47;
+  border-color: #ffc7d0;
+}
+
+/* Info */
+
+.toya-status-info {
+  background: #e5f4ff;
+  color: #0879ed;
+  border-color: #c5e7ff;
+}
+
+/* Neutral */
+
+.toya-status-neutral {
+  background: #edf2f7;
+  color: #60768c;
+  border-color: #dce5ee;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toya-status-badge {
+    animation: none !important;
+    transition: none !important;
+  }
+}

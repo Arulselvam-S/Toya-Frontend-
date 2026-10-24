@@ -1,0 +1,802 @@
+
+/* ================================================
+   TOYA MANAGEMENT SYSTEM
+   EMPLOYEE WORK LOGS — FINAL PREMIUM CSS
+   Theme: White / Aqua Blue / Navy
+================================================ */
+
+.toya-ewl {
+  --ewl-primary: #0879ed;
+  --ewl-primary-dark: #0669d0;
+  --ewl-navy: #102b52;
+  --ewl-muted: #7892ab;
+  --ewl-border: #e5edf6;
+  --ewl-background: #f8fbff;
+
+  width: 100%;
+  min-width: 0;
+  padding-bottom: 32px;
+  color: var(--ewl-navy);
+}
+
+/* ================================================
+   PAGE HEADER
+================================================ */
+
+.toya-ewl .toya-workspace-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.toya-ewl .toya-workspace-title {
+  color: var(--ewl-navy);
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.5px;
+  margin-bottom: 5px !important;
+}
+
+.toya-ewl .MuiButton-root {
+  text-transform: none;
+  font-weight: 700;
+  border-radius: 9px;
+  box-shadow: none;
+}
+
+.toya-ewl .toya-ewl-primary-btn.MuiButton-contained {
+  min-height: 41px;
+  padding: 9px 19px;
+  background: var(--ewl-primary);
+  color: #fff;
+}
+
+.toya-ewl .toya-ewl-primary-btn.MuiButton-contained:hover {
+  background: var(--ewl-primary-dark);
+}
+
+/* ================================================
+   ATTENDANCE STATUS
+================================================ */
+
+.toya-ewl-shift-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 13px 16px;
+  margin-bottom: 18px;
+  border: 1px solid #d6f0e2;
+  border-radius: 11px;
+  background: #effaf4;
+}
+
+.toya-ewl-shift-info > svg {
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+
+/* ================================================
+   SUMMARY STATISTICS
+================================================ */
+
+.toya-ewl .toya-workspace-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.toya-ewl .toya-workspace-stats > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 11px;
+
+  min-width: 0;
+  min-height: 105px;
+  padding: 18px 20px;
+
+  background: #fff;
+  border: 1px solid var(--ewl-border);
+  border-radius: 13px;
+  box-shadow: 0 4px 16px rgba(15, 64, 115, 0.035);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.toya-ewl .toya-workspace-stats > div:hover {
+  transform: translateY(-2px);
+  border-color: #bfddfa;
+  box-shadow: 0 8px 22px rgba(15, 64, 115, 0.06);
+}
+
+.toya-ewl .toya-workspace-stats span {
+  color: var(--ewl-muted);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.toya-ewl .toya-workspace-stats strong {
+  color: var(--ewl-navy);
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+/* ================================================
+   ADD / EDIT WORK LOG FORM
+================================================ */
+
+.toya-ewl .toya-ewl-form-card {
+  margin-bottom: 22px;
+  background: #fff;
+  border: 1px solid var(--ewl-border);
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(15, 64, 115, 0.035);
+  scroll-margin-top: 110px;
+}
+
+.toya-ewl .toya-workspace-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 2px 0;
+}
+
+.toya-ewl .toya-workspace-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.toya-ewl .toya-workspace-form .MuiOutlinedInput-root {
+  border-radius: 9px;
+  background: #f9fcff;
+}
+
+.toya-ewl .toya-workspace-form .MuiOutlinedInput-root:hover {
+  background: #f4faff;
+}
+
+.toya-ewl .toya-workspace-form .MuiInputLabel-root {
+  font-size: 13px;
+}
+
+.toya-ewl .toya-workspace-form .MuiFormHelperText-root {
+  font-size: 11px;
+}
+
+.toya-ewl .toya-workspace-form .MuiButton-root {
+  min-height: 40px;
+  padding: 9px 19px;
+  font-size: 12px;
+}
+
+/* ================================================
+   WORK LOG HISTORY MAIN PANEL
+================================================ */
+
+.toya-ewl .toya-workspace-table {
+  min-width: 0;
+  padding: 24px;
+
+  background: #fff;
+  border: 1px solid #e2eaf4;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(16, 43, 82, 0.04);
+}
+
+/* HISTORY HEADER */
+
+.toya-ewl-history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  padding-bottom: 17px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.toya-ewl-history-header .MuiTypography-root {
+  letter-spacing: -0.15px;
+}
+
+/* ================================================
+   SEARCH & FILTER TOOLBAR
+================================================ */
+
+.toya-ewl-history-filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 13px;
+
+  padding: 15px;
+  margin-bottom: 17px;
+
+  background: #f7faff;
+  border: 1px solid #e3edf7;
+  border-radius: 12px;
+}
+
+.toya-ewl-history-filters
+  > .MuiFormControl-root:first-child {
+  flex: 1 1 260px;
+  min-width: 0;
+}
+
+.toya-ewl-history-filters
+  > .MuiFormControl-root:not(:first-child) {
+  flex: 1 1 165px;
+  min-width: 0;
+}
+
+.toya-ewl-history-filters .MuiOutlinedInput-root {
+  min-height: 43px;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.toya-ewl-history-filters .MuiButton-root {
+  min-height: 43px;
+  padding: 9px 17px;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* RESULT COUNT */
+
+.toya-ewl-history-filters + .MuiTypography-root {
+  color: var(--ewl-muted);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+/* ================================================
+   INDIVIDUAL WORK LOG CARDS
+================================================ */
+
+.toya-ewl .toya-ewl-log-row {
+  position: relative;
+
+  padding: 20px 22px;
+  margin-bottom: 13px;
+
+  background: #fff;
+  border: 1px solid #e3edf7;
+  border-left: 3px solid var(--ewl-primary);
+  border-radius: 12px;
+
+  box-shadow: 0 3px 12px rgba(16, 43, 82, 0.025);
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.toya-ewl .toya-ewl-log-row:hover {
+  border-color: #b8daf8;
+  border-left-color: var(--ewl-primary);
+  box-shadow: 0 9px 24px rgba(16, 43, 82, 0.07);
+  transform: translateY(-2px);
+}
+
+.toya-ewl .toya-ewl-log-row:last-child {
+  margin-bottom: 0;
+}
+
+/* TITLE AND STATUS */
+
+.toya-ewl-log-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.toya-ewl .toya-ewl-log-title {
+  color: var(--ewl-navy);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+  overflow-wrap: anywhere;
+}
+
+.toya-ewl-log-top > .MuiChip-root {
+  height: 28px;
+  padding: 0 3px;
+  flex-shrink: 0;
+  border-radius: 7px;
+  font-weight: 750;
+}
+
+.toya-ewl-log-top > .MuiChip-outlinedSuccess {
+  background: #eefaf4;
+}
+
+.toya-ewl-log-top > .MuiChip-outlinedInfo {
+  background: #eef7ff;
+}
+
+.toya-ewl-log-top > .MuiChip-outlinedError {
+  background: #fff0f2;
+}
+
+/* CARD DIVIDER */
+
+.toya-ewl-log-row .MuiDivider-root {
+  margin-top: 14px;
+  margin-bottom: 14px;
+  border-color: #edf2f8;
+}
+
+/* DESCRIPTION */
+
+.toya-ewl .toya-ewl-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+
+  overflow: hidden;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+
+  margin: 4px 0;
+  color: #526c89;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* CARD FOOTER */
+
+.toya-ewl-log-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.toya-ewl-log-footer > .MuiChip-root {
+  height: 29px;
+  border: 1px solid #dbeafd;
+  border-radius: 8px;
+  background: #f3f8ff;
+  color: #1760ab;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+/* BUTTONS */
+
+.toya-ewl-row-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.toya-ewl-row-actions .MuiButton-root {
+  min-height: 35px;
+  padding: 7px 15px;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 750;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.toya-ewl-row-actions .MuiButton-root:hover {
+  transform: translateY(-1px);
+  background: #edf6ff;
+}
+
+.toya-ewl-row-actions
+  .MuiButton-outlinedError:hover {
+  background: #fff0f2;
+}
+
+/* ================================================
+   EMPTY STATE
+================================================ */
+
+.toya-ewl-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  min-height: 170px;
+  padding: 35px 16px;
+
+  text-align: center;
+  color: var(--ewl-muted);
+}
+
+/* ================================================
+   WORK LOG DETAILS MODAL
+   MUI PORTAL — INDEPENDENT SELECTORS
+================================================ */
+
+.toya-ewl-details-paper {
+  width: 100%;
+  max-width: 570px !important;
+  margin: 18px !important;
+
+  overflow: hidden;
+  border: 1px solid #e5edf6;
+  border-radius: 17px !important;
+  background: #fff;
+
+  box-shadow:
+    0 24px 70px rgba(12, 41, 79, 0.18) !important;
+}
+
+/* MODAL HEADER */
+
+.toya-ewl-details-paper .toya-ewl-dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+
+  padding: 21px 25px;
+  border-bottom: 1px solid #edf2f7;
+  background: #fff;
+}
+
+.toya-ewl-details-paper .toya-ewl-dialog-title {
+  color: var(--ewl-navy, #102b52);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.toya-ewl-details-paper .toya-ewl-dialog-date {
+  margin-top: 4px;
+  color: #7892ab;
+  font-size: 12px;
+}
+
+.toya-ewl-details-paper .toya-ewl-dialog-close {
+  display: grid;
+  place-items: center;
+
+  width: 35px;
+  height: 35px;
+  flex: 0 0 35px;
+
+  border-radius: 9px;
+  background: #f5f9fc;
+  color: #7189a2;
+}
+
+.toya-ewl-details-paper .toya-ewl-dialog-close:hover {
+  background: #e8f3ff;
+  color: #0879ed;
+}
+
+/* MODAL CONTENT */
+
+.toya-ewl-details-paper .toya-ewl-details-content {
+  padding: 25px !important;
+  background: #fff;
+}
+
+.toya-ewl-details-paper .toya-ewl-detail-section {
+  margin-bottom: 26px;
+}
+
+.toya-ewl-details-paper .toya-ewl-detail-section:last-child {
+  margin-bottom: 0;
+}
+
+.toya-ewl-details-paper .toya-ewl-detail-label {
+  margin-bottom: 9px;
+  color: #8199b2;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.toya-ewl-details-paper .toya-ewl-detail-title {
+  color: #102b52;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+/* MODAL CHIPS */
+
+.toya-ewl-details-paper .toya-ewl-detail-chips {
+  margin-top: 13px;
+}
+
+.toya-ewl-details-paper
+  .toya-ewl-detail-chips .MuiChip-root {
+  height: 28px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* DESCRIPTION CARD */
+
+.toya-ewl-details-paper .toya-ewl-detail-description {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  padding: 17px 18px;
+
+  background: #f7fbff;
+  border: 1px solid #e4edf7;
+  border-radius: 11px;
+}
+
+.toya-ewl-details-paper
+  .toya-ewl-detail-description > svg {
+  flex: 0 0 auto;
+  margin-top: 2px;
+  color: #0879ed;
+}
+
+.toya-ewl-details-paper
+  .toya-ewl-detail-description .MuiTypography-root {
+  flex: 1;
+  min-width: 0;
+
+  color: #243e60;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* WORK DATE / SUBMITTED DATE */
+
+.toya-ewl-details-paper .toya-ewl-detail-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+
+  padding-top: 17px;
+  border-top: 1px solid #edf2f7;
+}
+
+.toya-ewl-details-paper .toya-ewl-detail-meta > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  min-width: 0;
+}
+
+.toya-ewl-details-paper .toya-ewl-detail-meta span {
+  color: #8199b2;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.toya-ewl-details-paper .toya-ewl-detail-meta strong {
+  color: #102b52;
+  font-size: 12px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+/* MODAL FOOTER */
+
+.toya-ewl-details-paper .toya-ewl-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+
+  padding: 14px 25px;
+
+  border-top: 1px solid #edf2f7;
+  background: #fbfdff;
+}
+
+.toya-ewl-details-paper
+  .toya-ewl-dialog-actions .MuiButton-root {
+  min-width: 100px;
+  min-height: 37px;
+  padding: 8px 17px;
+
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: none;
+}
+
+/* ================================================
+   TABLET
+================================================ */
+
+@media (max-width: 900px) {
+  .toya-ewl .toya-workspace-stats {
+    gap: 11px;
+  }
+
+  .toya-ewl .toya-workspace-stats > div {
+    padding: 15px;
+    min-height: 98px;
+  }
+
+  .toya-ewl .toya-workspace-stats strong {
+    font-size: 24px;
+  }
+}
+
+/* ================================================
+   MOBILE
+================================================ */
+
+@media (max-width: 650px) {
+  .toya-ewl {
+    padding-bottom: 22px;
+  }
+
+  .toya-ewl .toya-workspace-title {
+    font-size: 22px !important;
+  }
+
+  .toya-ewl .toya-workspace-header {
+    align-items: flex-start;
+  }
+
+  .toya-ewl .toya-workspace-header
+    .toya-ewl-primary-btn {
+    width: 100%;
+  }
+
+  .toya-ewl .toya-workspace-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .toya-ewl .toya-workspace-stats > div {
+    padding: 14px;
+    min-height: 88px;
+  }
+
+  .toya-ewl .toya-workspace-stats span {
+    font-size: 11px;
+  }
+
+  .toya-ewl .toya-workspace-stats strong {
+    font-size: 23px;
+  }
+
+  .toya-ewl .toya-workspace-form-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .toya-ewl .toya-workspace-table {
+    padding: 15px;
+    border-radius: 13px;
+  }
+
+  .toya-ewl-history-header {
+    align-items: flex-start;
+    padding-bottom: 13px;
+  }
+
+  .toya-ewl-history-filters {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 11px;
+  }
+
+  .toya-ewl-history-filters
+    > .MuiFormControl-root:first-child,
+  .toya-ewl-history-filters
+    > .MuiFormControl-root:not(:first-child) {
+    flex: none;
+    width: 100%;
+  }
+
+  .toya-ewl-history-filters .MuiButton-root {
+    width: 100%;
+  }
+
+  .toya-ewl .toya-ewl-log-row {
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .toya-ewl-log-top {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .toya-ewl-log-footer {
+    align-items: flex-start;
+  }
+
+  .toya-ewl-row-actions {
+    width: 100%;
+  }
+
+  .toya-ewl-row-actions .MuiButton-root {
+    flex: 1 1 auto;
+  }
+
+  /* MOBILE DIALOG */
+
+  .toya-ewl-details-paper {
+    width: calc(100% - 24px) !important;
+    margin: 12px !important;
+    border-radius: 13px !important;
+  }
+
+  .toya-ewl-details-paper .toya-ewl-dialog-header {
+    padding: 17px;
+  }
+
+  .toya-ewl-details-paper .toya-ewl-details-content {
+    padding: 18px !important;
+  }
+
+  .toya-ewl-details-paper
+    .toya-ewl-detail-description {
+    padding: 14px;
+  }
+
+  .toya-ewl-details-paper .toya-ewl-detail-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .toya-ewl-details-paper .toya-ewl-dialog-actions {
+    padding: 12px 17px;
+  }
+}
+
+@media (max-width: 390px) {
+  .toya-ewl .toya-workspace-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .toya-ewl-row-actions .MuiButton-root {
+    flex: 1 1 auto;
+  }
+}
+
+/* ================================================
+   ACCESSIBILITY
+================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .toya-ewl .toya-workspace-stats > div,
+  .toya-ewl .toya-ewl-log-row,
+  .toya-ewl-row-actions .MuiButton-root {
+    transition: none;
+  }
+
+  .toya-ewl .toya-workspace-stats > div:hover,
+  .toya-ewl .toya-ewl-log-row:hover,
+  .toya-ewl-row-actions .MuiButton-root:hover {
+    transform: none;
+  }
+}

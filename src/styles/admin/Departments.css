@@ -1,0 +1,188 @@
+
+/* ==========================================
+   TOYA DEPARTMENT MANAGEMENT
+   Premium Aqua Blue + White
+   ========================================== */
+
+.toya-departments-page {
+  width: 100%;
+  min-width: 0;
+  padding-bottom: 40px;
+}
+
+/* Heading */
+
+.toya-dept-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 26px;
+}
+
+.toya-dept-page-title {
+  color: #0b2852;
+  font-size: 27px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.5px;
+}
+
+/* Statistics */
+
+.toya-dept-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.toya-dept-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 22px;
+  min-width: 0;
+  min-height: 110px;
+
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.95);
+
+  background: rgba(255,255,255,0.87);
+  backdrop-filter: blur(18px);
+
+  box-shadow: 0 10px 30px rgba(8,80,150,0.06);
+
+  transition: box-shadow 0.25s ease;
+}
+
+.toya-dept-stat-card:hover {
+  box-shadow: 0 16px 36px rgba(8,80,150,0.12);
+}
+
+.toya-dept-stat-icon {
+  width: 52px;
+  height: 52px;
+  flex: 0 0 52px;
+
+  display: grid;
+  place-items: center;
+
+  color: #0879ed;
+  background: #e5f4ff;
+  border-radius: 15px;
+}
+
+.toya-dept-stat-value {
+  color: #0b2852;
+  font-size: 28px !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+}
+
+/* Search and filters */
+
+.toya-dept-filters {
+  display: grid;
+  grid-template-columns: minmax(220px, 2fr) minmax(180px, 1fr);
+  align-items: start;
+  gap: 16px;
+
+  padding: 20px;
+  margin-bottom: 22px;
+
+  border: 1px solid #ffffff;
+  border-radius: 18px;
+
+  background: rgba(255,255,255,0.84);
+  backdrop-filter: blur(18px);
+}
+
+/* Table cells */
+
+.toya-dept-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.toya-dept-icon {
+  display: grid;
+  place-items: center;
+
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+
+  color: #0879ed;
+  background: #e5f4ff;
+  border-radius: 11px;
+}
+
+/* Modal details */
+
+.toya-dept-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+
+  padding: 12px 0;
+  border-bottom: 1px solid #eaf1f8;
+}
+
+.toya-dept-detail:last-child {
+  border-bottom: none;
+}
+
+.toya-dept-detail .MuiTypography-root {
+  overflow-wrap: anywhere;
+}
+
+.toya-dept-detail .MuiTypography-root:last-child {
+  text-align: right;
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+  .toya-dept-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .toya-dept-page-title {
+    font-size: 22px !important;
+  }
+
+  .toya-dept-stats,
+  .toya-dept-filters {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .toya-dept-stat-card {
+    padding: 18px;
+  }
+
+  .toya-dept-filters {
+    padding: 16px;
+  }
+
+  .toya-dept-detail {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .toya-dept-detail .MuiTypography-root:last-child {
+    text-align: left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toya-dept-stat-card {
+    transition: none;
+  }
+}

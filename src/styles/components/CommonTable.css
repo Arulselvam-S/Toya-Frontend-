@@ -1,0 +1,87 @@
+
+/* ======================================
+   TOYA COMMON TABLE
+   Aqua White Glassmorphism
+   ====================================== */
+
+.toyo-table-card {
+  overflow: hidden;
+  border-radius: 20px !important;
+
+  background: rgba(255, 255, 255, 0.82) !important;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.95);
+
+  box-shadow:
+    0 12px 35px rgba(24, 107, 165, 0.08) !important;
+}
+
+.toyo-table-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 24px;
+}
+
+.toyo-table-search {
+  width: 280px;
+}
+
+.toyo-table-search .MuiOutlinedInput-root {
+  background: #f8fcff;
+  border-radius: 12px;
+}
+
+.toyo-table-card .MuiTableHead-root {
+  background: #eaf7ff;
+}
+
+.toyo-table-card .MuiTableHead-root .MuiTableCell-root {
+  color: #0b2852;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  border-bottom: 1px solid #d8eaf8;
+  padding: 16px;
+}
+
+.toyo-table-card .MuiTableBody-root .MuiTableCell-root {
+  color: #335572;
+  font-size: 13px;
+  border-bottom: 1px solid #edf3f8;
+  padding: 15px 16px;
+}
+
+.toyo-table-card .MuiTableBody-root
+.MuiTableRow-root:hover {
+  background: rgba(234, 247, 255, 0.65);
+}
+
+.toyo-table-card .MuiTableSortLabel-root:hover,
+.toyo-table-card .MuiTableSortLabel-root.Mui-active {
+  color: #0879ed;
+}
+
+.toyo-table-card .MuiTablePagination-root {
+  border-top: 1px solid #e9f2fa;
+}
+
+@media (max-width: 600px) {
+  .toyo-table-toolbar {
+    padding: 18px;
+  }
+
+  .toyo-table-search {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toyo-table-card * {
+    transition: none !important;
+  }
+}

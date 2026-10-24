@@ -1,0 +1,73 @@
+
+/* ==========================================
+   TOYO COMMON BUTTON
+   Premium Aqua Glass Design
+   ========================================== */
+
+.toyo-common-button {
+  min-height: 43px;
+  padding: 10px 20px !important;
+
+  border-radius: 12px !important;
+  font-weight: 650 !important;
+  font-size: 13px !important;
+  letter-spacing: 0.1px !important;
+  text-transform: none !important;
+
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease !important;
+}
+
+.toyo-common-button.MuiButton-containedPrimary {
+  color: #ffffff;
+  background:
+    linear-gradient(110deg, #0879ed, #25aff5);
+
+  box-shadow:
+    0 7px 18px rgba(8, 121, 237, 0.18);
+}
+
+.toyo-common-button.MuiButton-containedPrimary:hover {
+  background:
+    linear-gradient(110deg, #076ad0, #159fe8);
+
+  box-shadow:
+    0 12px 26px rgba(8, 121, 237, 0.28);
+}
+
+.toyo-common-button.MuiButton-outlinedPrimary {
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(8, 121, 237, 0.35);
+  color: #0879ed;
+}
+
+.toyo-common-button.MuiButton-outlinedPrimary:hover {
+  background: #eaf7ff;
+  border-color: #0879ed;
+}
+
+.toyo-common-button.MuiButton-containedError {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.toyo-common-button.MuiButton-containedError:hover {
+  background: #dc2626;
+}
+
+.toyo-common-button.MuiButton-textPrimary:hover {
+  background: rgba(8, 121, 237, 0.08);
+}
+
+.toyo-common-button.Mui-disabled {
+  opacity: 0.55;
+  box-shadow: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toyo-common-button {
+    transition: none !important;
+  }
+}

@@ -1,0 +1,96 @@
+
+/* =========================================
+   TOYA COMMON MODAL
+   Premium Aqua Glassmorphism
+   ========================================= */
+
+.toya-common-modal.MuiDialog-paper {
+  border-radius: 22px !important;
+  overflow: hidden;
+
+  background:
+    rgba(255, 255, 255, 0.94) !important;
+
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+
+  border: 1px solid rgba(255, 255, 255, 0.95);
+
+  box-shadow:
+    0 25px 80px rgba(8, 80, 150, 0.18) !important;
+}
+
+.toya-modal-header {
+  padding: 24px 28px !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(234, 247, 255, 0.95),
+      rgba(255, 255, 255, 0.9)
+    );
+}
+
+.toya-modal-header-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.toya-modal-icon {
+  width: 46px;
+  height: 46px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 14px;
+
+  color: #0879ed;
+  background: #e4f4ff;
+}
+
+.toya-modal-content {
+  padding: 26px 28px !important;
+  border-color: #e5f0f8 !important;
+}
+
+.toya-modal-footer {
+  padding: 18px 28px !important;
+  gap: 10px;
+
+  background: #fbfdff;
+}
+
+@media (max-width: 600px) {
+  .toya-common-modal.MuiDialog-paper {
+    margin: 16px;
+    width: calc(100% - 32px);
+  }
+
+  .toya-modal-header {
+    padding: 20px !important;
+  }
+
+  .toya-modal-content {
+    padding: 20px !important;
+  }
+
+  .toya-modal-footer {
+    padding: 16px !important;
+    flex-wrap: wrap;
+  }
+
+  .toya-modal-footer .MuiButton-root {
+    flex: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toya-common-modal * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

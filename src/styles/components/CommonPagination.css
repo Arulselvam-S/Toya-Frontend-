@@ -1,0 +1,125 @@
+
+/* ======================================
+   TOYA COMMON PAGINATION
+   Aqua Blue + White Glassmorphism
+   ====================================== */
+
+.toya-pagination-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  gap: 18px;
+  width: 100%;
+
+  padding: 18px 22px;
+
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid #e0eef8;
+  border-radius: 14px;
+
+  backdrop-filter: blur(16px);
+}
+
+.toya-pagination-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.toya-pagination-text {
+  color: #64809c;
+  font-size: 13px !important;
+}
+
+.toya-pagination-text strong {
+  color: #0b2852;
+  font-weight: 700;
+}
+
+.toya-rows-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toya-rows-select {
+  min-width: 75px;
+  height: 37px;
+  border-radius: 9px !important;
+
+  background: #f5fbff;
+}
+
+.toya-rows-select .MuiOutlinedInput-notchedOutline {
+  border-color: #d5e8f6;
+}
+
+.toya-pagination .MuiPagination-ul {
+  gap: 4px;
+}
+
+.toya-pagination .MuiPaginationItem-root {
+  border-radius: 9px;
+  min-width: 34px;
+  height: 34px;
+
+  font-weight: 650;
+  font-size: 13px;
+
+  color: #52728f;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.toya-pagination .MuiPaginationItem-root:hover {
+  background: #e5f4ff;
+  transform: translateY(-2px);
+}
+
+.toya-pagination .MuiPaginationItem-root.Mui-selected {
+  color: #ffffff;
+
+  background:
+    linear-gradient(115deg, #0879ed, #25aff5);
+
+  box-shadow:
+    0 5px 14px rgba(8, 121, 237, 0.22);
+}
+
+.toya-pagination .MuiPaginationItem-root.Mui-selected:hover {
+  background: #075db8;
+}
+
+@media (max-width: 700px) {
+  .toya-pagination-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+  }
+
+  .toya-pagination-info {
+    justify-content: space-between;
+  }
+
+  .toya-pagination {
+    display: flex;
+    justify-content: center;
+  }
+
+  .toya-pagination .MuiPagination-ul {
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toya-pagination .MuiPaginationItem-root {
+    transition: none;
+    transform: none !important;
+  }
+}

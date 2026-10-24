@@ -1,0 +1,149 @@
+
+.toya-profile-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #17324d;
+}
+
+.toya-profile-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toya-profile-title {
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  color: #153550;
+}
+
+.toya-profile-subtitle {
+  margin-top: 5px !important;
+  color: #71869b;
+  font-size: 13px !important;
+}
+
+.toya-profile-card {
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid #e3edf5;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(24, 78, 120, 0.06);
+}
+
+.toya-profile-banner {
+  height: 115px;
+  background: linear-gradient(115deg, #dff5f4, #e8f3ff, #f2f7ff);
+}
+
+.toya-profile-identity {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 0 28px 24px;
+  margin-top: -40px;
+}
+
+.toya-profile-avatar {
+  width: 82px !important;
+  height: 82px !important;
+  border: 5px solid white;
+  background: linear-gradient(135deg, #0879ed, #16b8ae) !important;
+  font-size: 30px !important;
+  font-weight: 800 !important;
+  box-shadow: 0 5px 18px rgba(8, 121, 237, 0.2);
+}
+
+.toya-profile-identity-text {
+  padding-top: 38px;
+  min-width: 0;
+}
+
+.toya-profile-name {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: #17324d;
+}
+
+.toya-profile-role {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 9px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: #0879a8;
+  background: #e7f7fb;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.toya-profile-form {
+  padding: 26px 28px;
+}
+
+.toya-profile-section-title {
+  margin-bottom: 20px !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  color: #17324d;
+}
+
+.toya-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.toya-profile-input-icon {
+  flex-shrink: 0;
+  margin-right: 10px;
+  color: #7b91a7;
+}
+
+.toya-profile-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.toya-profile-loading {
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+@media (max-width: 700px) {
+  .toya-profile-title {
+    font-size: 22px !important;
+  }
+
+  .toya-profile-identity {
+    padding-left: 18px;
+    padding-right: 18px;
+    gap: 12px;
+  }
+
+  .toya-profile-form {
+    padding: 22px 18px;
+  }
+
+  .toya-profile-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .toya-profile-actions {
+    flex-direction: column-reverse;
+  }
+
+  .toya-profile-actions button {
+    width: 100%;
+  }
+}

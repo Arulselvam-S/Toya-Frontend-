@@ -1,0 +1,346 @@
+
+/* =========================================
+   TOYA MANAGEMENT SYSTEM
+   MANAGER + EMPLOYEE WORKSPACE
+   White / Aqua Blue Theme
+========================================= */
+
+.toya-workspace {
+  width: 100%;
+  min-width: 0;
+  padding-bottom: 40px;
+  animation: toyaWorkspaceEnter 0.45s ease both;
+}
+
+@keyframes toyaWorkspaceEnter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* PAGE HEADER */
+
+.toya-workspace-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.toya-workspace-title {
+  color: #0b2852;
+  font-size: 28px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.6px;
+  margin-bottom: 5px !important;
+}
+
+.toya-workspace-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* STATS CARDS */
+
+.toya-workspace-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.toya-workspace-stats > div {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e5eff8;
+  border-radius: 19px;
+  box-shadow: 0 10px 30px rgba(11, 65, 125, 0.055);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.toya-workspace-stats > div:hover {
+  transform: translateY(-4px);
+  border-color: #b8e2fa;
+  box-shadow: 0 18px 36px rgba(11, 65, 125, 0.09);
+}
+
+.toya-workspace-stats span {
+  color: #7892ab;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.toya-workspace-stats strong {
+  color: #0b2852;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+}
+
+/* FILTER PANEL */
+
+.toya-workspace-filters {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(180px, 1fr);
+  gap: 15px;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 22px;
+  background: #ffffff;
+  border: 1px solid #e5eff8;
+  border-radius: 19px;
+}
+
+.toya-workspace-filters .MuiOutlinedInput-root,
+.toya-workspace-form .MuiOutlinedInput-root {
+  border-radius: 11px;
+  background: #f9fcff;
+}
+
+.toya-workspace-filters .MuiOutlinedInput-root:hover,
+.toya-workspace-form .MuiOutlinedInput-root:hover {
+  background: #f4faff;
+}
+
+/* TABLE PANEL */
+
+.toya-workspace-table {
+  min-width: 0;
+  padding: 21px;
+  background: #ffffff;
+  border: 1px solid #e5eff8;
+  border-radius: 19px;
+  box-shadow: 0 10px 30px rgba(11, 65, 125, 0.055);
+}
+
+.toya-workspace-table .MuiTableContainer-root {
+  overflow-x: auto;
+}
+
+.toya-workspace-table .MuiTableCell-head {
+  background: #f5faff;
+  color: #52718f;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.toya-workspace-table .MuiTableRow-root:hover {
+  background: #f8fcff;
+}
+
+.toya-work-progress {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 110px;
+}
+
+/* TEAM CARDS */
+
+.toya-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.toya-team-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #e5eff8;
+  border-radius: 19px;
+  box-shadow: 0 10px 30px rgba(11, 65, 125, 0.055);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.toya-team-card:hover {
+  transform: translateY(-5px);
+  border-color: #a8dcfb;
+  box-shadow: 0 18px 35px rgba(11, 65, 125, 0.1);
+}
+
+.toya-team-card .MuiAvatar-root {
+  box-shadow: 0 5px 14px rgba(0, 125, 230, 0.09);
+}
+
+.toya-team-card .MuiTypography-root {
+  overflow-wrap: anywhere;
+}
+
+/* FORM CONTENT */
+
+.toya-workspace-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 5px 0;
+}
+
+.toya-workspace-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.toya-workspace-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-top: 15px;
+  margin-top: 4px;
+  border-top: 1px solid #eaf1f7;
+}
+
+/* BUTTON REFINEMENTS */
+
+.toya-workspace-actions button,
+.toya-workspace-modal-actions button {
+  border-radius: 11px;
+  text-transform: none;
+  font-weight: 700;
+  transition: transform 0.2s ease;
+}
+
+.toya-workspace-actions button:hover,
+.toya-workspace-modal-actions button:hover {
+  transform: translateY(-2px);
+}
+
+/* MANAGER REPORT PROGRESS */
+
+.toya-workspace-table .MuiLinearProgress-root,
+.toya-work-progress .MuiLinearProgress-root {
+  border-radius: 10px;
+  background-color: #e7f3fc;
+}
+
+.toya-workspace-table .MuiLinearProgress-bar,
+.toya-work-progress .MuiLinearProgress-bar {
+  background-color: #0879ed;
+  border-radius: 10px;
+}
+
+/* RESPONSIVENESS */
+
+@media (max-width: 1100px) {
+  .toya-team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .toya-workspace-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .toya-workspace {
+    padding-bottom: 25px;
+  }
+
+  .toya-workspace-header {
+    align-items: flex-start;
+    margin-bottom: 18px;
+  }
+
+  .toya-workspace-title {
+    font-size: 23px !important;
+  }
+
+  .toya-workspace-actions {
+    width: 100%;
+  }
+
+  .toya-workspace-stats {
+    gap: 11px;
+  }
+
+  .toya-workspace-stats > div {
+    padding: 16px;
+    border-radius: 15px;
+  }
+
+  .toya-workspace-stats span {
+    font-size: 11px;
+  }
+
+  .toya-workspace-stats strong {
+    font-size: 25px;
+  }
+
+  .toya-workspace-filters {
+    grid-template-columns: 1fr;
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .toya-workspace-table {
+    padding: 12px;
+    border-radius: 15px;
+  }
+
+  .toya-team-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .toya-team-card {
+    padding: 18px;
+  }
+
+  .toya-workspace-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 380px) {
+  .toya-workspace-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toya-workspace {
+    animation: none;
+  }
+
+  .toya-workspace-stats > div,
+  .toya-team-card,
+  .toya-workspace-actions button,
+  .toya-workspace-modal-actions button {
+    transition: none;
+  }
+
+  .toya-workspace-stats > div:hover,
+  .toya-team-card:hover,
+  .toya-workspace-actions button:hover,
+  .toya-workspace-modal-actions button:hover {
+    transform: none;
+  }
+}

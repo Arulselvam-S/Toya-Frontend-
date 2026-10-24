@@ -1,0 +1,253 @@
+
+/* TOYA System Settings */
+
+.toya-settings-page {
+  width: 100%;
+  min-width: 0;
+  padding-bottom: 40px;
+}
+
+.toya-settings-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.toya-settings-title {
+  font-size: 27px !important;
+  font-weight: 800 !important;
+  color: #0b2852;
+}
+
+.toya-settings-subtitle {
+  margin-top: 5px !important;
+  font-size: 13px !important;
+  color: #8198ac;
+}
+
+.toya-settings-heading-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Layout */
+
+.toya-settings-layout {
+  display: grid;
+  grid-template-columns: 245px minmax(0, 1fr);
+  align-items: start;
+  gap: 20px;
+}
+
+.toya-settings-navigation,
+.toya-settings-content {
+  min-width: 0;
+  background: #fff;
+  border: 1px solid #eaf2f9;
+  border-radius: 19px;
+  box-shadow: 0 12px 30px rgba(8, 80, 150, 0.05);
+}
+
+.toya-settings-navigation {
+  padding: 18px 12px;
+}
+
+.toya-settings-nav-heading {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 12px 19px;
+  color: #0b2852;
+}
+
+.toya-settings-nav-heading svg {
+  color: #0879ed;
+}
+
+.toya-settings-tabs {
+  min-height: 210px;
+}
+
+.toya-settings-tabs .MuiTabs-indicator {
+  left: 0;
+  right: auto;
+  width: 3px;
+  background: #0879ed;
+  border-radius: 4px;
+}
+
+.toya-settings-tabs .MuiTab-root {
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 48px;
+  margin-bottom: 6px;
+  padding: 11px 13px;
+  border-radius: 10px;
+  text-align: left;
+  color: #667f98;
+  font-size: 12px;
+  font-weight: 750;
+  text-transform: none;
+}
+
+.toya-settings-tabs .MuiTab-root.Mui-selected {
+  background: #eaf5ff;
+  color: #0879ed;
+}
+
+.toya-settings-tabs .MuiTab-iconWrapper {
+  margin-right: 12px;
+  margin-bottom: 0;
+}
+
+.toya-settings-content {
+  min-height: 410px;
+  padding: 25px;
+}
+
+.toya-settings-section-title {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 25px;
+  color: #0b2852;
+}
+
+.toya-settings-section-title > svg {
+  color: #0879ed;
+}
+
+/* Form */
+
+.toya-settings-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.toya-settings-grid-wide {
+  grid-column: 1 / -1;
+}
+
+.toya-settings-content .MuiOutlinedInput-root {
+  border-radius: 11px;
+  background: #f9fcff;
+}
+
+.toya-settings-form-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid #eaf2f9;
+}
+
+/* Working days */
+
+.toya-settings-days {
+  margin-top: 25px;
+  padding: 18px;
+  background: #f7fbff;
+  border: 1px solid #e7f0f8;
+  border-radius: 13px;
+}
+
+.toya-settings-days-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3px 12px;
+}
+
+.toya-settings-days-grid .MuiFormControlLabel-label {
+  color: #425e78;
+  font-size: 12px;
+}
+
+/* Switch rows */
+
+.toya-setting-switch-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  min-height: 75px;
+  padding: 14px 2px;
+  border-bottom: 1px solid #edf3f8;
+}
+
+.toya-setting-switch-row:last-of-type {
+  border-bottom: none;
+}
+
+.toya-settings-reset-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+/* Responsive */
+
+@media (max-width: 1050px) {
+  .toya-settings-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .toya-settings-navigation {
+    padding: 12px;
+  }
+
+  .toya-settings-nav-heading {
+    padding-bottom: 8px;
+  }
+
+  .toya-settings-tabs {
+    min-height: auto;
+  }
+
+  .toya-settings-tabs .MuiTabs-flexContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .toya-settings-tabs .MuiTab-root {
+    min-width: 130px;
+  }
+
+  .toya-settings-tabs .MuiTabs-indicator {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .toya-settings-title {
+    font-size: 22px !important;
+  }
+
+  .toya-settings-content {
+    padding: 16px;
+  }
+
+  .toya-settings-form-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 15px;
+  }
+
+  .toya-settings-days-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .toya-settings-grid-wide {
+    grid-column: auto;
+  }
+
+  .toya-settings-heading-actions {
+    width: 100%;
+  }
+}

@@ -1,0 +1,105 @@
+
+/* TOYA PREMIUM CONFIRMATION DIALOG */
+
+.toya-confirm-dialog.MuiDialog-paper {
+  border-radius: 22px !important;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.96) !important;
+
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+
+  border: 1px solid rgba(255, 255, 255, 0.95);
+
+  box-shadow:
+    0 25px 75px rgba(8, 80, 150, 0.18) !important;
+}
+
+.toya-confirm-top {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 32px 24px 8px;
+}
+
+.toya-confirm-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 22px;
+
+  display: grid;
+  place-items: center;
+}
+
+.toya-confirm-error {
+  color: #df3d51;
+  background: #ffedf0;
+}
+
+.toya-confirm-warning {
+  color: #c78110;
+  background: #fff4df;
+}
+
+.toya-confirm-success {
+  color: #0e9b72;
+  background: #e4f8ef;
+}
+
+.toya-confirm-info {
+  color: #0879ed;
+  background: #e5f4ff;
+}
+
+.toya-confirm-close {
+  position: absolute !important;
+  right: 15px;
+  top: 15px;
+}
+
+.toya-confirm-title {
+  text-align: center;
+  font-size: 23px !important;
+  font-weight: 800 !important;
+  padding-bottom: 6px !important;
+}
+
+.toya-confirm-content {
+  text-align: center;
+  padding: 5px 30px 25px !important;
+}
+
+.toya-confirm-actions {
+  display: flex;
+  justify-content: center !important;
+  gap: 12px;
+
+  padding: 15px 25px 30px !important;
+}
+
+.toya-confirm-actions .MuiButton-root {
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+  .toya-confirm-dialog.MuiDialog-paper {
+    margin: 16px;
+    width: calc(100% - 32px);
+  }
+
+  .toya-confirm-content {
+    padding-inline: 20px !important;
+  }
+
+  .toya-confirm-actions {
+    padding-inline: 18px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toya-confirm-dialog * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

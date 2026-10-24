@@ -1,0 +1,571 @@
+
+/* =========================================
+   TOYA MANAGER - TEAM ATTENDANCE
+========================================= */
+
+.toya-manager-attendance {
+  --attendance-primary: #1677df;
+  --attendance-heading: #102c55;
+  --attendance-muted: #7186a3;
+  --attendance-border: #e1ebf5;
+  --attendance-background: #f4f8fd;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 100%;
+  padding: 28px;
+  background: var(--attendance-background);
+  box-sizing: border-box;
+  color: var(--attendance-heading);
+  font-family: inherit;
+}
+
+.toya-manager-attendance *,
+.toya-manager-attendance *::before,
+.toya-manager-attendance *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.toya-manager-attendance .attendance-header {
+  margin-bottom: 26px;
+}
+
+.toya-manager-attendance .attendance-page-title {
+  margin: 0 0 6px;
+  color: var(--attendance-heading);
+  font-size: clamp(1.65rem, 3vw, 2rem);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.6px;
+}
+
+.toya-manager-attendance .attendance-page-subtitle {
+  color: var(--attendance-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.toya-manager-attendance .attendance-header-actions {
+  align-items: center;
+}
+
+.toya-manager-attendance .attendance-header-actions .MuiButton-root {
+  min-height: 42px;
+  padding: 9px 16px;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: none;
+  white-space: nowrap;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.toya-manager-attendance
+  .attendance-header-actions
+  .MuiButton-outlined {
+  color: #365778;
+  border-color: #cbdced;
+  background: #ffffff;
+}
+
+.toya-manager-attendance
+  .attendance-header-actions
+  .MuiButton-outlined:hover {
+  border-color: var(--attendance-primary);
+  background: #f0f7ff;
+}
+
+.toya-manager-attendance
+  .attendance-header-actions
+  .MuiButton-contained {
+  color: #ffffff;
+  background: var(--attendance-primary);
+  box-shadow: 0 5px 12px rgba(22, 119, 223, 0.16);
+}
+
+.toya-manager-attendance
+  .attendance-header-actions
+  .MuiButton-contained:hover {
+  background: #0865c7;
+  box-shadow: 0 7px 16px rgba(22, 119, 223, 0.22);
+}
+
+/* =========================================
+   SUMMARY STATISTICS
+========================================= */
+
+.toya-manager-attendance .attendance-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.toya-manager-attendance .attendance-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+  padding: 22px;
+  overflow: hidden;
+  border: 1px solid var(--attendance-border);
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 4px 16px rgba(30, 73, 119, 0.025);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.toya-manager-attendance .attendance-stat-card:hover {
+  transform: translateY(-2px);
+  border-color: #c7def5;
+  box-shadow: 0 9px 24px rgba(30, 73, 119, 0.07);
+}
+
+.toya-manager-attendance .attendance-stat-icon {
+  display: grid;
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border-radius: 14px;
+}
+
+.toya-manager-attendance .attendance-stat-value {
+  margin: 0;
+  color: var(--attendance-heading);
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.toya-manager-attendance .attendance-stat-label {
+  margin-top: 5px;
+  color: var(--attendance-muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* =========================================
+   FILTER PANEL
+========================================= */
+
+.toya-manager-attendance .attendance-filters {
+  margin-bottom: 22px;
+  padding: 20px;
+  border: 1px solid var(--attendance-border);
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 3px 12px rgba(30, 73, 119, 0.025);
+}
+
+.toya-manager-attendance .attendance-filter-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 230px;
+  gap: 16px;
+}
+
+.toya-manager-attendance .attendance-filter-grid .MuiOutlinedInput-root {
+  min-height: 43px;
+  border-radius: 10px;
+  background: #ffffff;
+  font-size: 0.875rem;
+}
+
+.toya-manager-attendance
+  .attendance-filter-grid
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #dbe6f2;
+}
+
+.toya-manager-attendance
+  .attendance-filter-grid
+  .MuiOutlinedInput-root:hover
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #a9c6e6;
+}
+
+.toya-manager-attendance
+  .attendance-filter-grid
+  .MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: var(--attendance-primary);
+  border-width: 1px;
+}
+
+.toya-manager-attendance
+  .attendance-filter-grid
+  .MuiInputAdornment-root {
+  color: #8196b0;
+}
+
+.toya-manager-attendance .attendance-date-caption {
+  margin-top: 13px;
+  color: var(--attendance-muted);
+}
+
+.toya-manager-attendance .attendance-date-caption svg {
+  flex-shrink: 0;
+}
+
+/* =========================================
+   ERROR MESSAGE
+========================================= */
+
+.toya-manager-attendance .attendance-error {
+  margin-bottom: 20px;
+  border-radius: 12px;
+}
+
+/* =========================================
+   ATTENDANCE TABLE CARD
+========================================= */
+
+.toya-manager-attendance .attendance-table-card {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--attendance-border);
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 4px 16px rgba(30, 73, 119, 0.025);
+}
+
+.toya-manager-attendance .attendance-table-heading {
+  padding: 22px 24px;
+  border-bottom: 1px solid #edf2f8;
+}
+
+.toya-manager-attendance .attendance-table-heading .MuiTypography-h6 {
+  color: var(--attendance-heading);
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+}
+
+.toya-manager-attendance
+  .attendance-table-heading
+  .MuiTypography-body2 {
+  margin-top: 5px;
+  color: var(--attendance-muted);
+  font-size: 0.82rem;
+}
+
+.toya-manager-attendance .attendance-table-container {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #c8d8e9 transparent;
+}
+
+.toya-manager-attendance .attendance-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.toya-manager-attendance .attendance-table .MuiTableHead-root {
+  background: #f6f9fe;
+}
+
+.toya-manager-attendance
+  .attendance-table
+  .MuiTableHead-root
+  .MuiTableCell-root {
+  padding: 15px 18px;
+  border-bottom: 1px solid #e7eef7;
+  color: #526b89;
+  font-size: 0.77rem;
+  font-weight: 800;
+  letter-spacing: 0.25px;
+  white-space: nowrap;
+}
+
+.toya-manager-attendance .attendance-table .MuiTableBody-root .MuiTableRow-root {
+  transition: background-color 150ms ease;
+}
+
+.toya-manager-attendance
+  .attendance-table
+  .MuiTableBody-root
+  .MuiTableRow-root:hover {
+  background: #f7fbff;
+}
+
+.toya-manager-attendance
+  .attendance-table
+  .MuiTableBody-root
+  .MuiTableCell-root {
+  padding: 16px 18px;
+  border-bottom: 1px solid #edf2f8;
+  color: #435d7b;
+  font-size: 0.84rem;
+  vertical-align: middle;
+}
+
+.toya-manager-attendance
+  .attendance-table
+  .MuiTableBody-root
+  .MuiTableRow-root:last-child
+  .MuiTableCell-root {
+  border-bottom: none;
+}
+
+.toya-manager-attendance
+  .attendance-table
+  .MuiTableCell-root
+  .MuiStack-root {
+  min-width: 0;
+}
+
+.toya-manager-attendance .attendance-table .MuiTableCell-root svg {
+  flex-shrink: 0;
+  color: #7990aa;
+}
+
+.toya-manager-attendance .attendance-employee-avatar {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  background: #e8f2ff;
+  color: #1677df;
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.toya-manager-attendance .attendance-employee-name {
+  color: #17365e;
+  font-size: 0.87rem;
+  font-weight: 750;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.toya-manager-attendance .attendance-employee-code {
+  display: block;
+  margin-top: 2px;
+  color: #8497ae;
+  font-size: 0.75rem;
+  overflow-wrap: anywhere;
+}
+
+/* =========================================
+   STATUS CHIPS
+========================================= */
+
+.toya-manager-attendance .attendance-status-present {
+  height: 27px;
+  border-radius: 8px;
+  background: #e2f7ec;
+  color: #087b50;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.toya-manager-attendance .attendance-status-unmarked {
+  height: 27px;
+  border-radius: 8px;
+  background: #fff3dd;
+  color: #9a6700;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.toya-manager-attendance
+  .attendance-status-present
+  .MuiChip-label,
+.toya-manager-attendance
+  .attendance-status-unmarked
+  .MuiChip-label {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+/* =========================================
+   LOADING AND EMPTY STATES
+========================================= */
+
+.toya-manager-attendance .attendance-state {
+  min-height: 250px;
+  padding: 55px 20px;
+  color: var(--attendance-muted);
+  text-align: center;
+}
+
+.toya-manager-attendance .attendance-state .MuiCircularProgress-root {
+  color: var(--attendance-primary);
+}
+
+.toya-manager-attendance .attendance-empty-avatar {
+  width: 58px;
+  height: 58px;
+  background: #edf5ff;
+  color: #7893b2;
+}
+
+.toya-manager-attendance .attendance-empty-title {
+  color: #526b89;
+  font-weight: 750;
+}
+
+.toya-manager-attendance .attendance-state .MuiTypography-body2 {
+  max-width: 420px;
+  color: var(--attendance-muted);
+  line-height: 1.6;
+}
+
+/* =========================================
+   RESPONSIVE: TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+  .toya-manager-attendance {
+    padding: 24px;
+  }
+
+  .toya-manager-attendance .attendance-stats {
+    gap: 14px;
+  }
+
+  .toya-manager-attendance .attendance-stat-card {
+    gap: 12px;
+    padding: 18px;
+  }
+
+  .toya-manager-attendance .attendance-stat-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .toya-manager-attendance .attendance-stat-value {
+    font-size: 1.6rem;
+  }
+
+  .toya-manager-attendance
+    .attendance-table
+    .MuiTableCell-root {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+}
+
+/* =========================================
+   RESPONSIVE: MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .toya-manager-attendance {
+    padding: 16px;
+  }
+
+  .toya-manager-attendance .attendance-header {
+    margin-bottom: 20px;
+  }
+
+  .toya-manager-attendance .attendance-page-title {
+    font-size: 1.55rem;
+  }
+
+  .toya-manager-attendance .attendance-page-subtitle {
+    font-size: 0.83rem;
+  }
+
+  .toya-manager-attendance .attendance-header-actions {
+    width: 100%;
+  }
+
+  .toya-manager-attendance .attendance-header-actions .MuiButton-root {
+    flex: 1;
+    min-width: 0;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .toya-manager-attendance .attendance-stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .toya-manager-attendance .attendance-stat-card {
+    padding: 16px;
+    border-radius: 13px;
+  }
+
+  .toya-manager-attendance .attendance-stat-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+  }
+
+  .toya-manager-attendance .attendance-stat-value {
+    font-size: 1.5rem;
+  }
+
+  .toya-manager-attendance .attendance-filters {
+    padding: 15px;
+    margin-bottom: 18px;
+  }
+
+  .toya-manager-attendance .attendance-filter-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 13px;
+  }
+
+  .toya-manager-attendance .attendance-table-heading {
+    padding: 18px;
+  }
+
+  .toya-manager-attendance
+    .attendance-table-heading
+    .MuiTypography-h6 {
+    font-size: 1rem;
+  }
+
+  .toya-manager-attendance .attendance-table-card {
+    border-radius: 13px;
+  }
+
+  .toya-manager-attendance
+    .attendance-table
+    .MuiTableHead-root
+    .MuiTableCell-root {
+    padding: 13px 14px;
+  }
+
+  .toya-manager-attendance
+    .attendance-table
+    .MuiTableBody-root
+    .MuiTableCell-root {
+    padding: 14px;
+  }
+
+  .toya-manager-attendance .attendance-state {
+    min-height: 220px;
+    padding: 40px 16px;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .toya-manager-attendance *,
+  .toya-manager-attendance *::before,
+  .toya-manager-attendance *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

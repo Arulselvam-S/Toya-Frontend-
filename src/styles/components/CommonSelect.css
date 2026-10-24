@@ -1,0 +1,109 @@
+
+/* ======================================
+   TOYA COMMON SELECT
+   Aqua Blue + White Glass Theme
+   ====================================== */
+
+.toyo-common-select .MuiOutlinedInput-root {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.toyo-common-select .MuiOutlinedInput-root:hover {
+  background: #ffffff;
+  box-shadow:
+    0 4px 14px rgba(8, 121, 237, 0.07);
+}
+
+.toyo-common-select
+.MuiOutlinedInput-root.Mui-focused {
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 4px rgba(8, 121, 237, 0.08);
+
+  transform: translateY(-1px);
+}
+
+.toyo-common-select
+.MuiOutlinedInput-notchedOutline {
+  border-color: #d9eaf7;
+}
+
+.toyo-common-select
+.MuiOutlinedInput-root.Mui-focused
+.MuiOutlinedInput-notchedOutline {
+  border-color: #0879ed;
+}
+
+.toyo-common-select .MuiInputLabel-root {
+  color: #64809c;
+  font-weight: 500;
+}
+
+.toyo-common-select
+.MuiInputLabel-root.Mui-focused {
+  color: #0879ed;
+}
+
+.toyo-common-select .MuiChip-root {
+  background: #e5f4ff;
+  color: #0879ed;
+
+  border: 1px solid #c9e8ff;
+  border-radius: 8px;
+
+  font-weight: 600;
+}
+
+.toyo-select-dropdown {
+  margin-top: 6px !important;
+
+  border-radius: 14px !important;
+
+  background:
+    rgba(255, 255, 255, 0.96) !important;
+
+  backdrop-filter: blur(18px);
+
+  border:
+    1px solid rgba(220, 236, 248, 0.95);
+
+  box-shadow:
+    0 15px 35px rgba(8, 80, 150, 0.12) !important;
+}
+
+.toyo-select-dropdown
+.MuiAutocomplete-option {
+  margin: 3px 6px;
+  border-radius: 8px;
+}
+
+.toyo-select-dropdown
+.MuiAutocomplete-option.Mui-focused {
+  background: #eaf7ff !important;
+}
+
+.toyo-select-dropdown
+.MuiAutocomplete-option[aria-selected="true"] {
+  background: #d9efff !important;
+  color: #075db8;
+  font-weight: 600;
+}
+
+.toyo-common-select
+.MuiOutlinedInput-root.Mui-disabled {
+  background: #eff4f8;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toyo-common-select .MuiOutlinedInput-root {
+    transition: none;
+    transform: none;
+  }
+}

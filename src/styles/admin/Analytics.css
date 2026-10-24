@@ -1,0 +1,408 @@
+
+/* =========================================
+   TOYA ADVANCED ANALYTICS
+   ========================================= */
+
+.toya-analytics-page {
+  width: 100%;
+  min-width: 0;
+  padding-bottom: 40px;
+}
+
+/* Header */
+
+.toya-analytics-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.toya-analytics-title {
+  color: #0b2852;
+  font-size: 27px !important;
+  font-weight: 800 !important;
+}
+
+.toya-analytics-subtitle {
+  margin-top: 6px !important;
+  font-size: 13px !important;
+  color: #8198ac;
+}
+
+.toya-analytics-demo-alert {
+  margin-bottom: 20px;
+  border-radius: 12px !important;
+}
+
+/* Filters */
+
+.toya-analytics-filters {
+  display: grid;
+  grid-template-columns:
+    minmax(125px, 1fr)
+    minmax(165px, 1.2fr)
+    minmax(140px, 1fr)
+    minmax(145px, 1fr)
+    minmax(160px, 1.2fr)
+    auto;
+
+  align-items: center;
+  gap: 12px;
+  padding: 19px;
+  margin-bottom: 13px;
+  border: 1px solid #eaf2f9;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.toya-analytics-filters .MuiOutlinedInput-root {
+  border-radius: 11px;
+  background: #f9fcff;
+}
+
+.toya-analytics-date-caption {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 14px;
+  margin-bottom: 23px;
+  border-radius: 10px;
+  background: #eaf5ff;
+  color: #0879ed;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Metric cards */
+
+.toya-analytics-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 17px;
+  margin-bottom: 23px;
+}
+
+.toya-analytics-metric {
+  min-width: 0;
+  padding: 21px;
+  border-radius: 18px;
+  border: 1px solid #fff;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 10px 30px rgba(8, 80, 150, 0.06);
+}
+
+.toya-analytics-metric-icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 15px;
+  border-radius: 13px;
+  background: #e5f4ff;
+  color: #0879ed;
+}
+
+.toya-analytics-metric.tone-green
+.toya-analytics-metric-icon {
+  background: #def8ed;
+  color: #10946a;
+}
+
+.toya-analytics-metric.tone-cyan
+.toya-analytics-metric-icon {
+  background: #e3f9fc;
+  color: #089eb4;
+}
+
+.toya-analytics-metric.tone-orange
+.toya-analytics-metric-icon {
+  background: #fff4df;
+  color: #c98816;
+}
+
+.toya-analytics-metric-value {
+  font-size: 30px !important;
+  font-weight: 800 !important;
+  color: #0b2852;
+}
+
+.toya-analytics-metric-label {
+  margin-top: 7px !important;
+  color: #405d79;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+}
+
+/* Charts */
+
+.toya-analytics-chart-card {
+  min-width: 0;
+  padding: 22px;
+  margin-bottom: 22px;
+  background: #fff;
+  border: 1px solid #f2f6fa;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(8, 80, 150, 0.05);
+}
+
+.toya-analytics-chart-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.toya-analytics-chart-large {
+  width: 100%;
+  min-width: 0;
+  height: 340px;
+}
+
+.toya-analytics-chart-medium {
+  width: 100%;
+  min-width: 0;
+  height: 290px;
+}
+
+.toya-analytics-chart-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.toya-analytics-chart-grid
+.toya-analytics-chart-card {
+  margin-bottom: 22px;
+}
+
+.toya-analytics-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #8198ac;
+  font-size: 13px;
+}
+
+/* Employee table */
+
+.toya-analytics-table-section {
+  min-width: 0;
+  padding: 20px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(8, 80, 150, 0.05);
+}
+
+.toya-analytics-table-section .toyo-table-card {
+  box-shadow: none;
+  border: 0;
+  background: transparent;
+}
+
+.toya-analytics-table-section
+.toya-pagination-wrapper {
+  padding-top: 16px;
+  border-top: 1px solid #edf3f8;
+}
+
+.toya-analytics-employee {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toya-analytics-avatar {
+  width: 38px !important;
+  height: 38px !important;
+  flex: 0 0 38px;
+  background: #e5f4ff !important;
+  color: #0879ed !important;
+  font-size: 14px !important;
+  font-weight: 750 !important;
+}
+
+.toya-analytics-progress {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 110px;
+}
+
+.toya-analytics-progress-track {
+  flex: 1;
+  height: 8px;
+  min-width: 60px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #e8f1f8;
+}
+
+.toya-analytics-progress-track > div {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(
+    90deg,
+    #0879ed,
+    #38bdf8
+  );
+}
+
+.toya-analytics-progress strong {
+  flex-shrink: 0;
+  font-size: 11px;
+  color: #405d79;
+}
+
+/* Details modal */
+
+.toya-analytics-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #edf3f8;
+}
+
+.toya-analytics-profile-avatar {
+  width: 46px !important;
+  height: 46px !important;
+  background: linear-gradient(
+    135deg,
+    #0879ed,
+    #38bdf8
+  ) !important;
+  font-weight: 800 !important;
+}
+
+.toya-analytics-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.toya-analytics-detail-grid > div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 12px 14px;
+  border: 1px solid #e7f0f8;
+  border-radius: 11px;
+  background: #f5faff;
+  min-width: 0;
+}
+
+.toya-analytics-detail-grid span {
+  font-size: 11px;
+  color: #8198ac;
+}
+
+.toya-analytics-detail-grid strong {
+  font-size: 14px;
+  color: #0b2852;
+}
+
+.toya-analytics-detail-list {
+  margin-top: 12px;
+  border: 1px solid #edf3f8;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.toya-analytics-task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  border-bottom: 1px solid #edf3f8;
+}
+
+.toya-analytics-task-item:last-child {
+  border-bottom: 0;
+}
+
+.toya-analytics-task-item > div {
+  min-width: 0;
+}
+
+.toya-analytics-task-item .MuiChip-root {
+  flex-shrink: 0;
+  text-transform: capitalize;
+}
+
+.toya-analytics-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 18px;
+}
+
+/* Responsive */
+
+@media (max-width: 1400px) {
+  .toya-analytics-filters {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1050px) {
+  .toya-analytics-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .toya-analytics-chart-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+}
+
+@media (max-width: 750px) {
+  .toya-analytics-title {
+    font-size: 22px !important;
+  }
+
+  .toya-analytics-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .toya-analytics-chart-large {
+    height: 290px;
+  }
+}
+
+@media (max-width: 550px) {
+  .toya-analytics-filters {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 14px;
+  }
+
+  .toya-analytics-metrics {
+    gap: 11px;
+  }
+
+  .toya-analytics-metric {
+    padding: 15px;
+  }
+
+  .toya-analytics-metric-value {
+    font-size: 24px !important;
+  }
+
+  .toya-analytics-chart-card,
+  .toya-analytics-table-section {
+    padding: 13px;
+  }
+
+  .toya-analytics-detail-grid {
+    gap: 8px;
+  }
+
+  .toya-analytics-task-item {
+    flex-wrap: wrap;
+  }
+}

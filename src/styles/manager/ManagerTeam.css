@@ -1,0 +1,353 @@
+
+/* ===================================
+   TOYA MANAGER TEAM — PREMIUM UI
+=================================== */
+
+.toya-manager-team {
+  width: 100%;
+  min-width: 0;
+  padding-bottom: 32px;
+  color: #102b52;
+}
+
+.tmt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.tmt-title {
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.5px;
+  color: #102b52;
+}
+
+.tmt-subtitle {
+  font-size: 12px !important;
+  color: #7892ab;
+  margin-top: 4px !important;
+}
+
+/* SUMMARY */
+
+.tmt-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.tmt-summary-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  padding: 18px 20px;
+  background: #fff;
+  border: 1px solid #e5eff8;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(11, 65, 125, 0.035);
+}
+
+.tmt-summary-icon {
+  width: 43px;
+  height: 43px;
+  flex: 0 0 43px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+}
+
+.tmt-summary-icon.blue {
+  background: #e9f3ff;
+  color: #0879ed;
+}
+
+.tmt-summary-icon.green {
+  background: #e6f7ef;
+  color: #0c9b70;
+}
+
+.tmt-summary-icon.cyan {
+  background: #e4f8fc;
+  color: #0798c2;
+}
+
+.tmt-summary-value {
+  font-size: 24px !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+}
+
+.tmt-summary-label {
+  font-size: 11px !important;
+  color: #7892ab;
+  margin-top: 4px !important;
+}
+
+/* FILTERS */
+
+.tmt-filter-bar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 200px;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding: 14px;
+  background: #fff;
+  border: 1px solid #e5eff8;
+  border-radius: 14px;
+}
+
+.tmt-filter-bar .MuiOutlinedInput-root {
+  border-radius: 9px;
+  background: #f9fcff;
+}
+
+/* EMPLOYEE CARDS */
+
+.tmt-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.tmt-employee-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 19px;
+  background: #fff;
+  border: 1px solid #e5eff8;
+  border-radius: 15px;
+  box-shadow: 0 5px 18px rgba(11, 65, 125, 0.035);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.tmt-employee-card:hover {
+  transform: translateY(-3px);
+  border-color: #b8def8;
+  box-shadow: 0 12px 28px rgba(11, 65, 125, 0.075);
+}
+
+.tmt-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.tmt-identity {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+}
+
+.tmt-avatar {
+  width: 44px !important;
+  height: 44px !important;
+  background: #e5f4ff !important;
+  color: #0879ed !important;
+  font-size: 17px !important;
+  font-weight: 800 !important;
+}
+
+.tmt-name {
+  color: #102b52;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+}
+
+.tmt-department {
+  font-size: 11px !important;
+  color: #7892ab;
+  margin-top: 3px !important;
+}
+
+.tmt-email {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px !important;
+  font-size: 12px !important;
+  color: #6c86a0;
+  overflow-wrap: anywhere;
+}
+
+.tmt-divider {
+  margin: 16px 0 !important;
+  border-color: #eef3f8 !important;
+}
+
+.tmt-metrics-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.tmt-metric-value {
+  font-size: 19px !important;
+  font-weight: 800 !important;
+  color: #102b52;
+}
+
+.tmt-metric-label {
+  margin-top: 3px !important;
+  font-size: 11px !important;
+  color: #7892ab;
+}
+
+.tmt-progress-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.tmt-progress-bar {
+  height: 7px !important;
+  border-radius: 8px !important;
+  background: #e8f3fb !important;
+}
+
+.tmt-progress-bar .MuiLinearProgress-bar {
+  background: #0879ed !important;
+  border-radius: 8px;
+}
+
+.tmt-details-button {
+  margin-top: 19px !important;
+  border-radius: 9px !important;
+  text-transform: none !important;
+  font-weight: 700 !important;
+  padding: 9px 12px !important;
+}
+
+.tmt-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  padding: 45px;
+  background: #fff;
+  border: 1px dashed #c8dded;
+  border-radius: 14px;
+  color: #7892ab;
+}
+
+/* DETAILS MODAL */
+
+.tmt-dialog-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.tmt-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 11px;
+}
+
+.tmt-detail-grid > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+  padding: 13px;
+  background: #f6faff;
+  border: 1px solid #e8f1f8;
+  border-radius: 10px;
+}
+
+.tmt-detail-grid span {
+  font-size: 11px;
+  color: #7892ab;
+}
+
+.tmt-detail-grid strong {
+  font-size: 13px;
+  color: #102b52;
+}
+
+.tmt-task-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px 0;
+  border-bottom: 1px solid #edf3f8;
+}
+
+.tmt-task-row:last-child {
+  border-bottom: 0;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1250px) {
+  .tmt-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 850px) {
+  .tmt-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tmt-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .tmt-title {
+    font-size: 22px !important;
+  }
+
+  .tmt-filter-bar {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tmt-summary {
+    gap: 10px;
+  }
+
+  .tmt-summary-card {
+    padding: 14px;
+  }
+
+  .tmt-employee-card {
+    padding: 16px;
+  }
+
+  .tmt-detail-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 380px) {
+  .tmt-summary {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tmt-employee-card {
+    transition: none;
+  }
+
+  .tmt-employee-card:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,250 @@
+
+/* =========================================
+   TOYA MANAGER PROFILE
+   ========================================= */
+
+.toya-manager-profile-page {
+  width: 100%;
+  min-width: 0;
+  padding: 8px 0 40px;
+  color: #0b2852;
+  box-sizing: border-box;
+}
+
+.toya-manager-profile-page * {
+  box-sizing: border-box;
+}
+
+.toya-manager-profile-heading {
+  margin-bottom: 22px;
+}
+
+.toya-manager-profile-title {
+  color: #0b2852;
+  font-size: 28px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.5px;
+}
+
+.toya-manager-profile-subtitle {
+  margin-top: 6px !important;
+  color: #7189a0;
+  font-size: 13px !important;
+}
+
+.toya-manager-profile-card {
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e2edf7;
+  border-radius: 24px;
+  box-shadow: 0 15px 40px rgba(8, 80, 150, 0.06);
+}
+
+.toya-manager-profile-banner {
+  height: 145px;
+  background: linear-gradient(
+    115deg,
+    #def6f3 0%,
+    #e7f4ff 52%,
+    #f0f5ff 100%
+  );
+}
+
+.toya-manager-profile-identity {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  min-height: 142px;
+  padding: 0 34px 26px;
+  margin-top: -21px;
+}
+
+.toya-manager-profile-avatar {
+  width: 96px !important;
+  height: 96px !important;
+  flex-shrink: 0;
+  border: 6px solid #fff;
+  background: linear-gradient(135deg, #0879ed, #13b8b0) !important;
+  box-shadow: 0 10px 24px rgba(8, 121, 237, 0.18);
+  color: #fff !important;
+  font-size: 35px !important;
+  font-weight: 800 !important;
+}
+
+.toya-manager-profile-identity-text {
+  min-width: 0;
+  padding-top: 18px;
+}
+
+.toya-manager-profile-name {
+  color: #0b2852;
+  font-size: 23px !important;
+  font-weight: 800 !important;
+  overflow-wrap: anywhere;
+}
+
+.toya-manager-profile-email {
+  margin-top: 4px !important;
+  color: #385873;
+  font-size: 14px !important;
+  overflow-wrap: anywhere;
+}
+
+.toya-manager-profile-role {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 12px;
+  padding: 8px 12px;
+  border-radius: 30px;
+  background: #e5f7fc;
+  color: #0084b9;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.toya-manager-profile-form {
+  padding: 30px 34px;
+}
+
+.toya-manager-profile-section-title {
+  margin-bottom: 22px !important;
+  color: #12385e;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+}
+
+.toya-manager-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px 28px;
+}
+
+.toya-manager-profile-grid .MuiTextField-root {
+  min-width: 0;
+}
+
+.toya-manager-profile-grid .MuiOutlinedInput-root {
+  min-height: 50px;
+  border-radius: 13px;
+  background: #fff;
+  color: #173b61;
+  font-size: 14px;
+}
+
+.toya-manager-profile-grid .MuiOutlinedInput-notchedOutline {
+  border-color: #cfdbe7;
+}
+
+.toya-manager-profile-grid .MuiOutlinedInput-root:hover
+.MuiOutlinedInput-notchedOutline {
+  border-color: #80b9ed;
+}
+
+.toya-manager-profile-grid .MuiOutlinedInput-root.Mui-focused
+.MuiOutlinedInput-notchedOutline {
+  border-color: #0879ed;
+  border-width: 1.5px;
+}
+
+.toya-manager-profile-grid .MuiInputLabel-root {
+  color: #7189a0;
+  font-size: 13px;
+}
+
+.toya-manager-profile-grid .MuiInputAdornment-root {
+  color: #7893ab;
+}
+
+.toya-manager-profile-grid .MuiFormHelperText-root {
+  margin-left: 3px;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.toya-manager-profile-grid .MuiInputBase-input.Mui-disabled {
+  -webkit-text-fill-color: #8198ac;
+}
+
+.toya-manager-profile-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.toya-manager-profile-actions .MuiButton-root {
+  min-height: 44px;
+  padding: 9px 17px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: none;
+}
+
+.toya-manager-profile-actions .MuiButton-contained {
+  background: linear-gradient(135deg, #0879ed, #159ce9);
+  box-shadow: 0 6px 16px rgba(8, 121, 237, 0.16);
+}
+
+.toya-manager-profile-actions .MuiButton-contained:hover {
+  background: linear-gradient(135deg, #0668ce, #0879ed);
+}
+
+.toya-manager-profile-loading {
+  display: flex;
+  min-height: 280px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+@media (max-width: 700px) {
+  .toya-manager-profile-title {
+    font-size: 23px !important;
+  }
+
+  .toya-manager-profile-banner {
+    height: 110px;
+  }
+
+  .toya-manager-profile-identity {
+    gap: 15px;
+    padding: 0 18px 22px;
+  }
+
+  .toya-manager-profile-avatar {
+    width: 76px !important;
+    height: 76px !important;
+    font-size: 28px !important;
+  }
+
+  .toya-manager-profile-name {
+    font-size: 19px !important;
+  }
+
+  .toya-manager-profile-form {
+    padding: 23px 18px;
+  }
+
+  .toya-manager-profile-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .toya-manager-profile-actions {
+    flex-direction: column-reverse;
+  }
+
+  .toya-manager-profile-actions .MuiButton-root {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toya-manager-profile-page * {
+    scroll-behavior: auto;
+  }
+}

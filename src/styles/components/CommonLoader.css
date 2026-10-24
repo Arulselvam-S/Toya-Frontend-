@@ -1,0 +1,108 @@
+
+/* =====================================
+   TOYA COMMON LOADER
+   Aqua Glass Animation
+   ===================================== */
+
+.toya-loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  min-height: 130px;
+  width: 100%;
+  padding: 22px;
+}
+
+.toya-loader-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  background: linear-gradient(
+    135deg,
+    #f8fdff,
+    #e8f6ff,
+    #f5fbff
+  );
+}
+
+.toya-loader-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  min-height: 100%;
+
+  background: rgba(245, 251, 255, 0.78);
+  backdrop-filter: blur(8px);
+}
+
+.toya-water-loader {
+  position: relative;
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.75);
+
+  box-shadow:
+    0 15px 35px rgba(8, 121, 237, 0.12);
+
+  border: 1px solid white;
+}
+
+.toya-water-ring {
+  position: absolute;
+  inset: -6px;
+
+  border-radius: 50%;
+
+  border: 3px solid transparent;
+  border-top-color: #0879ed;
+  border-right-color: #38bdf8;
+}
+
+.toya-loader-message {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #64809c;
+  text-align: center;
+}
+
+.toya-skeleton-wrapper {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(200px, 1fr));
+
+  width: 100%;
+  gap: 18px;
+}
+
+.toya-skeleton-card {
+  min-height: 170px;
+  padding: 22px;
+
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+
+  border: 1px solid white;
+  border-radius: 18px;
+
+  box-shadow:
+    0 10px 25px rgba(8, 121, 237, 0.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toya-loader-container .MuiSkeleton-wave::after {
+    animation: none;
+  }
+
+  .toya-water-ring {
+    border-color: #bde7ff;
+    border-top-color: #0879ed;
+  }
+}

@@ -1,0 +1,272 @@
+
+/* ====================================
+   TOYA MANAGER TASK MANAGEMENT
+   ==================================== */
+
+.toya-mt-page {
+  width: 100%;
+  min-width: 0;
+  padding-bottom: 35px;
+}
+
+.toya-mt-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.toya-mt-title {
+  font-size: 27px !important;
+  font-weight: 800 !important;
+  color: #0b2852;
+}
+
+.toya-mt-subtitle {
+  margin-top: 5px !important;
+  font-size: 13px !important;
+  color: #8198ac;
+}
+
+.toya-mt-heading-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Statistics */
+
+.toya-mt-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 17px;
+  margin-bottom: 23px;
+}
+
+.toya-mt-stat {
+  min-width: 0;
+  padding: 21px;
+  background: #fff;
+  border: 1px solid #eaf2f9;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(8, 80, 150, 0.05);
+}
+
+.toya-mt-stat-icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 15px;
+  border-radius: 13px;
+  color: #0879ed;
+  background: #e5f4ff;
+}
+
+.toya-mt-stat.tone-green .toya-mt-stat-icon {
+  background: #def8ed;
+  color: #11966c;
+}
+
+.toya-mt-stat.tone-cyan .toya-mt-stat-icon {
+  background: #e3f8fc;
+  color: #0a9cb5;
+}
+
+.toya-mt-stat.tone-orange .toya-mt-stat-icon {
+  background: #fff3de;
+  color: #c88716;
+}
+
+.toya-mt-stat-number {
+  color: #0b2852;
+  font-size: 30px !important;
+  font-weight: 800 !important;
+}
+
+.toya-mt-stat-label {
+  margin-top: 6px !important;
+  color: #8198ac;
+  font-size: 12px !important;
+}
+
+/* Filters */
+
+.toya-mt-filters {
+  display: grid;
+  grid-template-columns:
+    minmax(210px, 1.6fr)
+    repeat(3, minmax(145px, 1fr));
+  gap: 13px;
+  padding: 19px;
+  margin-bottom: 22px;
+  background: #fff;
+  border: 1px solid #eaf2f9;
+  border-radius: 18px;
+}
+
+.toya-mt-filters .MuiOutlinedInput-root,
+.toya-mt-form .MuiOutlinedInput-root {
+  border-radius: 11px;
+  background: #f9fcff;
+}
+
+/* Table */
+
+.toya-mt-table-section {
+  min-width: 0;
+  padding: 20px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(8, 80, 150, 0.05);
+}
+
+.toya-mt-table-section .toyo-table-card {
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+.toya-mt-employee {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toya-mt-avatar {
+  width: 38px !important;
+  height: 38px !important;
+  flex: 0 0 38px;
+  background: #e5f4ff !important;
+  color: #0879ed !important;
+  font-size: 14px !important;
+  font-weight: 750 !important;
+}
+
+.toya-mt-progress {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 110px;
+}
+
+/* Form */
+
+.toya-mt-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 4px 0;
+}
+
+.toya-mt-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.toya-mt-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Task details */
+
+.toya-mt-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.toya-mt-detail-person {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #edf3f8;
+}
+
+.toya-mt-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 11px;
+}
+
+.toya-mt-detail-grid > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 13px;
+  background: #f5faff;
+  border: 1px solid #e7f0f8;
+  border-radius: 11px;
+}
+
+.toya-mt-detail-grid span {
+  font-size: 11px;
+  color: #8198ac;
+}
+
+.toya-mt-detail-grid strong {
+  font-size: 13px;
+  color: #0b2852;
+}
+
+.toya-mt-status-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.toya-mt-status-actions button {
+  width: 100%;
+  min-width: 0;
+  font-size: 11px;
+  white-space: normal;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+  .toya-mt-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .toya-mt-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .toya-mt-title {
+    font-size: 22px !important;
+  }
+
+  .toya-mt-stat {
+    padding: 15px;
+  }
+
+  .toya-mt-stat-number {
+    font-size: 25px !important;
+  }
+
+  .toya-mt-filters {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 14px;
+  }
+
+  .toya-mt-table-section {
+    padding: 12px;
+  }
+
+  .toya-mt-form-grid,
+  .toya-mt-detail-grid,
+  .toya-mt-status-actions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

@@ -1,0 +1,453 @@
+
+/* ======================================
+   TOYA USERS AND ROLES MANAGEMENT
+   ====================================== */
+
+.toya-ur-page {
+  width: 100%;
+  min-width: 0;
+  padding-bottom: 40px;
+}
+
+/* Header */
+
+.toya-ur-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.toya-ur-title {
+  font-size: 27px !important;
+  font-weight: 800 !important;
+  color: #0b2852;
+}
+
+.toya-ur-subtitle {
+  margin-top: 6px !important;
+  font-size: 13px !important;
+  color: #8198ac;
+}
+
+.toya-ur-header-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.toya-ur-demo-alert {
+  margin-bottom: 20px;
+  border-radius: 12px !important;
+}
+
+/* Stat cards */
+
+.toya-ur-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 17px;
+  margin-bottom: 23px;
+}
+
+.toya-ur-stat {
+  padding: 21px;
+  min-width: 0;
+  border: 1px solid #fff;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 10px 30px rgba(8, 80, 150, 0.06);
+}
+
+.toya-ur-stat-icon {
+  display: grid;
+  place-items: center;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 15px;
+  border-radius: 13px;
+  background: #e5f4ff;
+  color: #0879ed;
+}
+
+.toya-ur-stat.tone-green .toya-ur-stat-icon {
+  background: #def8ed;
+  color: #0f9266;
+}
+
+.toya-ur-stat.tone-cyan .toya-ur-stat-icon {
+  background: #e3f8fc;
+  color: #089db2;
+}
+
+.toya-ur-stat.tone-orange .toya-ur-stat-icon {
+  background: #fff3de;
+  color: #c88716;
+}
+
+.toya-ur-stat-number {
+  color: #0b2852;
+  font-size: 30px !important;
+  font-weight: 800 !important;
+}
+
+.toya-ur-stat-label {
+  margin-top: 7px !important;
+  color: #8198ac;
+  font-size: 12px !important;
+}
+
+/* Filters */
+
+.toya-ur-filters {
+  display: grid;
+  grid-template-columns:
+    minmax(200px, 2fr)
+    repeat(2, minmax(155px, 1fr));
+  gap: 14px;
+  align-items: center;
+
+  padding: 20px;
+  margin-bottom: 23px;
+
+  border: 1px solid #eaf2f9;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.toya-ur-filters .MuiOutlinedInput-root,
+.toya-ur-form .MuiOutlinedInput-root {
+  background: #f9fcff;
+  border-radius: 11px;
+}
+
+/* User table */
+
+.toya-ur-table-section {
+  min-width: 0;
+  padding: 20px;
+  margin-bottom: 23px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(8, 80, 150, 0.05);
+}
+
+.toya-ur-table-section .toyo-table-card {
+  background: transparent;
+  box-shadow: none;
+  border: 0;
+}
+
+.toya-ur-table-section .toya-pagination-wrapper {
+  padding-top: 17px;
+  border-top: 1px solid #edf3f8;
+}
+
+.toya-ur-user {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.toya-ur-avatar {
+  width: 39px !important;
+  height: 39px !important;
+  flex: 0 0 39px;
+  background: #e4f3ff !important;
+  color: #0879ed !important;
+  font-size: 14px !important;
+  font-weight: 750 !important;
+}
+
+/* Status chips */
+
+.toya-ur-role,
+.toya-ur-status {
+  border-radius: 8px !important;
+  font-size: 11px !important;
+  font-weight: 750 !important;
+}
+
+.toya-ur-role.role-admin {
+  background: #e7efff !important;
+  color: #345ed2 !important;
+}
+
+.toya-ur-role.role-manager {
+  background: #e5f6ff !important;
+  color: #0879ed !important;
+}
+
+.toya-ur-role.role-employee {
+  background: #f0f3f8 !important;
+  color: #6b8196 !important;
+}
+
+.toya-ur-status.status-active {
+  background: #def8ed !important;
+  color: #0e885e !important;
+}
+
+.toya-ur-status.status-inactive {
+  background: #ffedf0 !important;
+  color: #d64759 !important;
+}
+
+/* Permissions panel */
+
+.toya-ur-permission-panel {
+  padding: 22px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(8, 80, 150, 0.05);
+}
+
+.toya-ur-permission-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.toya-ur-role-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 20px;
+}
+
+.toya-ur-role-tabs button {
+  border: 1px solid #dbeaf7;
+  border-radius: 10px;
+  padding: 10px 20px;
+  background: #f8fbff;
+  color: #668099;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.toya-ur-role-tabs button.active {
+  border-color: #0879ed;
+  background: #e9f4ff;
+  color: #0879ed;
+}
+
+.toya-ur-role-tabs button:hover {
+  border-color: #0879ed;
+}
+
+.toya-ur-permission-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.toya-ur-permission-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid #e8f1f8;
+  border-radius: 11px;
+  background: #fafcff;
+}
+
+.toya-ur-permission-item.allowed {
+  background: #f5fbff;
+}
+
+.toya-ur-permission-item.restricted {
+  opacity: 0.66;
+}
+
+.toya-ur-permission-item > span {
+  flex: 1;
+  min-width: 0;
+  color: #365873;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.toya-ur-permission-item .MuiChip-root {
+  flex-shrink: 0;
+  font-size: 10px;
+}
+
+/* Forms */
+
+.toya-ur-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 4px 0;
+}
+
+.toya-ur-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* User details */
+
+.toya-ur-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #edf3f8;
+}
+
+.toya-ur-profile-avatar {
+  width: 48px !important;
+  height: 48px !important;
+  background: linear-gradient(
+    135deg,
+    #0879ed,
+    #38bdf8
+  ) !important;
+  font-weight: 800 !important;
+}
+
+.toya-ur-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 11px;
+  margin-top: 17px;
+}
+
+.toya-ur-details-grid > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 13px;
+  min-width: 0;
+  background: #f5faff;
+  border: 1px solid #e7f0f8;
+  border-radius: 11px;
+}
+
+.toya-ur-details-grid span {
+  color: #8198ac;
+  font-size: 11px;
+}
+
+.toya-ur-details-grid strong {
+  color: #0b2852;
+  font-size: 13px;
+}
+
+.toya-ur-switch-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 15px;
+  margin-top: 16px;
+  border-radius: 12px;
+  border: 1px solid #e7f0f8;
+  background: #f8fbff;
+}
+
+.toya-ur-details-permissions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Responsive */
+
+@media (max-width: 1050px) {
+  .toya-ur-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 750px) {
+  .toya-ur-title {
+    font-size: 22px !important;
+  }
+
+  .toya-ur-filters {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .toya-ur-permission-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .toya-ur-heading {
+    align-items: flex-start;
+  }
+
+  .toya-ur-header-actions {
+    width: 100%;
+  }
+
+  .toya-ur-stat {
+    padding: 15px;
+  }
+
+  .toya-ur-stat-number {
+    font-size: 25px !important;
+  }
+
+  .toya-ur-filters,
+  .toya-ur-table-section,
+  .toya-ur-permission-panel {
+    padding: 14px;
+  }
+
+  .toya-ur-details-grid {
+    gap: 8px;
+  }
+
+  .toya-ur-permission-item {
+    flex-wrap: wrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toya-ur-role-tabs button {
+    transition: none;
+  }
+}
+.toya-ur-filters {
+  display: grid;
+  grid-template-columns:
+    minmax(200px, 2fr)
+    minmax(140px, 1fr)
+    minmax(150px, 1fr)
+    auto;
+  gap: 14px;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 23px;
+  border: 1px solid #eaf2f9;
+  border-radius: 18px;
+  background: #fff;
+}
+
+@media (max-width: 1050px) {
+  .toya-ur-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 750px) {
+  .toya-ur-filters {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

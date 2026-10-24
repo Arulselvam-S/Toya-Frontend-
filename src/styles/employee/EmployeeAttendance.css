@@ -1,0 +1,524 @@
+
+/* =========================================
+   TOYA Employee Attendance
+   Premium Aqua Glass Theme
+========================================= */
+
+.toya-employee-attendance {
+  --tea-primary: #0879ed;
+  --tea-primary-dark: #075fbd;
+  --tea-text: #0b2852;
+  --tea-muted: #64748b;
+  --tea-border: #e3edf5;
+
+  min-height: 100vh;
+  padding: 30px;
+  color: var(--tea-text);
+  background:
+    radial-gradient(circle at 0% 0%, rgba(34, 211, 238, 0.12), transparent 32%),
+    radial-gradient(circle at 100% 10%, rgba(8, 121, 237, 0.07), transparent 28%),
+    linear-gradient(135deg, #f5fbff, #f9fcff 55%, #eef8fb);
+  box-sizing: border-box;
+}
+
+.toya-employee-attendance * {
+  box-sizing: border-box;
+}
+
+.toya-employee-attendance .tea-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 0 auto 26px;
+  max-width: 1440px;
+}
+
+.toya-employee-attendance .tea-title {
+  color: var(--tea-text);
+  font-size: clamp(1.7rem, 3vw, 2.15rem);
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  line-height: 1.25;
+}
+
+.toya-employee-attendance .tea-subtitle {
+  margin-top: 8px;
+  color: var(--tea-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.toya-employee-attendance .tea-header > .MuiChip-root {
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+/* Glass panels */
+
+.toya-employee-attendance .tea-panel {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto 24px;
+  padding: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow:
+    0 8px 28px rgba(22, 72, 110, 0.055),
+    0 1px 3px rgba(22, 72, 110, 0.04);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.toya-employee-attendance .tea-panel:hover {
+  border-color: rgba(8, 121, 237, 0.16);
+  box-shadow: 0 12px 32px rgba(22, 72, 110, 0.075);
+}
+
+/* Today's shift header */
+
+.toya-employee-attendance .tea-panel-header,
+.toya-employee-attendance .tea-history-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.toya-employee-attendance .tea-panel-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+}
+
+.toya-employee-attendance .tea-calendar-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  border: 1px solid #dcefff;
+  border-radius: 14px;
+  color: var(--tea-primary);
+  background: linear-gradient(145deg, #e8f6ff, #f4fcff);
+}
+
+.toya-employee-attendance .tea-status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 13px;
+  border: 1px solid var(--tea-border);
+  border-radius: 12px;
+  color: #475569;
+  background: #f8fbff;
+  font-size: 12px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.toya-employee-attendance .tea-status-indicator span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #94a3b8;
+}
+
+.toya-employee-attendance .tea-status-indicator span.active {
+  background: #0ea5e9;
+  box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.12);
+}
+
+.toya-employee-attendance .tea-status-indicator span.complete {
+  background: #16a34a;
+  box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.12);
+}
+
+.toya-employee-attendance .tea-status-indicator span.inactive {
+  background: #94a3b8;
+}
+
+/* Time cards */
+
+.toya-employee-attendance .tea-time-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.toya-employee-attendance .tea-time-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 0;
+  padding: 21px;
+  border: 1px solid #e6eff7;
+  border-radius: 17px;
+  background: linear-gradient(145deg, #ffffff, #f7fbff);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.toya-employee-attendance .tea-time-card:hover {
+  transform: translateY(-2px);
+  border-color: #c6e5f8;
+}
+
+.toya-employee-attendance .tea-time-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 15px;
+}
+
+.toya-employee-attendance .tea-time-icon.blue {
+  color: #0879ed;
+  background: #eaf4ff;
+}
+
+.toya-employee-attendance .tea-time-icon.orange {
+  color: #ea580c;
+  background: #fff2e8;
+}
+
+.toya-employee-attendance .tea-time-icon.cyan {
+  color: #0891b2;
+  background: #e6fbff;
+}
+
+.toya-employee-attendance .tea-time-label {
+  margin-bottom: 7px;
+  color: var(--tea-muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.toya-employee-attendance .tea-time-value {
+  color: var(--tea-text);
+  font-size: clamp(1.05rem, 2vw, 1.4rem);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.4px;
+  overflow-wrap: anywhere;
+}
+
+/* Attendance actions */
+
+.toya-employee-attendance .tea-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.toya-employee-attendance .tea-actions .MuiButton-root {
+  min-height: 44px;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 750;
+  text-transform: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.toya-employee-attendance .tea-actions .tea-check-in {
+  color: #fff;
+  background: linear-gradient(135deg, #0879ed, #1494dc);
+  box-shadow: 0 5px 14px rgba(8, 121, 237, 0.16);
+}
+
+.toya-employee-attendance .tea-actions .tea-check-in:hover {
+  background: linear-gradient(135deg, #075fbd, #0879ed);
+  box-shadow: 0 7px 18px rgba(8, 121, 237, 0.23);
+  transform: translateY(-1px);
+}
+
+.toya-employee-attendance .tea-actions .tea-check-out {
+  border-width: 1.5px;
+}
+
+.toya-employee-attendance .tea-actions .tea-log-button {
+  border-color: #b8def6;
+  color: #0879ed;
+  background: #f4faff;
+}
+
+.toya-employee-attendance .tea-actions .tea-log-button:hover {
+  border-color: #0879ed;
+  background: #eaf5ff;
+}
+
+.toya-employee-attendance .tea-actions .MuiButton-root:disabled {
+  opacity: 0.55;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Shift information message */
+
+.toya-employee-attendance .tea-shift-message {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 14px 16px;
+  border: 1px solid;
+  border-radius: 13px;
+}
+
+.toya-employee-attendance .tea-shift-message svg {
+  flex-shrink: 0;
+}
+
+.toya-employee-attendance .tea-shift-message.waiting {
+  border-color: #dce8f4;
+  color: #52677e;
+  background: #f6f9fd;
+}
+
+.toya-employee-attendance .tea-shift-message.working {
+  border-color: #bce8f8;
+  color: #086a9a;
+  background: #effaff;
+}
+
+.toya-employee-attendance .tea-shift-message.success {
+  border-color: #b8ebca;
+  color: #16733c;
+  background: #f0fdf4;
+}
+
+/* Attendance history */
+
+.toya-employee-attendance .tea-history-header {
+  margin-bottom: 20px;
+}
+
+.toya-employee-attendance .tea-history-header .MuiChip-root {
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+.toya-employee-attendance .tea-history-table {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--tea-border);
+  border-radius: 15px;
+  background: #fff;
+}
+
+.toya-employee-attendance .tea-history-columns,
+.toya-employee-attendance .tea-history-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1.15fr 1fr;
+  align-items: center;
+  gap: 14px;
+  min-width: 680px;
+  padding: 16px 19px;
+}
+
+.toya-employee-attendance .tea-history-columns {
+  color: #52677e;
+  background: #f3f9fe;
+  border-bottom: 1px solid var(--tea-border);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.toya-employee-attendance .tea-history-row {
+  min-height: 64px;
+  border-bottom: 1px solid #edf2f7;
+  transition: background 0.2s ease;
+}
+
+.toya-employee-attendance .tea-history-row:last-child {
+  border-bottom: 0;
+}
+
+.toya-employee-attendance .tea-history-row:hover {
+  background: #f7fbff;
+}
+
+.toya-employee-attendance .tea-history-row > * {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.toya-employee-attendance .tea-history-row .MuiChip-root {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.toya-employee-attendance .tea-empty {
+  padding: 35px 20px;
+  color: var(--tea-muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Alerts */
+
+.toya-employee-attendance .MuiAlert-root {
+  border-radius: 13px;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .toya-employee-attendance {
+    padding: 24px;
+  }
+
+  .toya-employee-attendance .tea-time-grid {
+    gap: 12px;
+  }
+
+  .toya-employee-attendance .tea-time-card {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .toya-employee-attendance .tea-time-value {
+    font-size: 1.2rem;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .toya-employee-attendance {
+    padding: 15px;
+  }
+
+  .toya-employee-attendance .tea-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .toya-employee-attendance .tea-title {
+    font-size: 1.7rem;
+  }
+
+  .toya-employee-attendance .tea-subtitle {
+    font-size: 13px;
+  }
+
+  .toya-employee-attendance .tea-panel {
+    padding: 17px;
+    margin-bottom: 18px;
+    border-radius: 18px;
+  }
+
+  .toya-employee-attendance .tea-panel-header,
+  .toya-employee-attendance .tea-history-header {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .toya-employee-attendance .tea-time-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 11px;
+  }
+
+  .toya-employee-attendance .tea-time-card {
+    align-items: center;
+    flex-direction: row;
+    padding: 16px;
+  }
+
+  .toya-employee-attendance .tea-time-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .toya-employee-attendance .tea-time-value {
+    font-size: 1.2rem;
+  }
+
+  .toya-employee-attendance .tea-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .toya-employee-attendance .tea-actions .MuiButton-root {
+    min-width: 0;
+    padding: 10px 8px;
+    font-size: 12px;
+  }
+
+  .toya-employee-attendance .tea-actions .tea-log-button {
+    grid-column: 1 / -1;
+  }
+
+  .toya-employee-attendance .tea-shift-message {
+    align-items: flex-start;
+    padding: 13px;
+  }
+
+  .toya-employee-attendance .tea-history-header > .MuiChip-root {
+    margin-left: auto;
+  }
+
+  .toya-employee-attendance .tea-history-table {
+    border-radius: 12px;
+  }
+
+  .toya-employee-attendance .tea-history-columns,
+  .toya-employee-attendance .tea-history-row {
+    padding: 14px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .toya-employee-attendance {
+    padding: 10px;
+  }
+
+  .toya-employee-attendance .tea-panel {
+    padding: 13px;
+  }
+
+  .toya-employee-attendance .tea-actions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .toya-employee-attendance .tea-actions .tea-log-button {
+    grid-column: auto;
+  }
+
+  .toya-employee-attendance .tea-status-indicator {
+    padding: 7px 10px;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .toya-employee-attendance .tea-panel,
+  .toya-employee-attendance .tea-time-card,
+  .toya-employee-attendance .tea-history-row,
+  .toya-employee-attendance .tea-actions .MuiButton-root {
+    transition: none;
+  }
+
+  .toya-employee-attendance .tea-time-card:hover,
+  .toya-employee-attendance .tea-actions .MuiButton-root:hover {
+    transform: none;
+  }
+}

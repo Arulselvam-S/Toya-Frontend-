@@ -1,0 +1,62 @@
+
+/* TOYA COMMON INPUT */
+
+.toyo-common-input .MuiOutlinedInput-root {
+  background: rgba(255, 255, 255, 0.82);
+  border-radius: 12px;
+
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.toyo-common-input .MuiOutlinedInput-root:hover {
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(8, 121, 237, 0.06);
+}
+
+.toyo-common-input .MuiOutlinedInput-root.Mui-focused {
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(8, 121, 237, 0.08);
+  transform: translateY(-1px);
+}
+
+.toyo-common-input .MuiOutlinedInput-notchedOutline {
+  border-color: #d9eaf7;
+}
+
+.toyo-common-input .MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #0879ed;
+}
+
+.toyo-common-input .MuiInputLabel-root {
+  color: #64809c;
+  font-weight: 500;
+}
+
+.toyo-common-input .MuiInputLabel-root.Mui-focused {
+  color: #0879ed;
+}
+
+.toyo-common-input .MuiFormHelperText-root {
+  margin-left: 3px;
+  font-size: 12px;
+}
+
+.toyo-common-input .MuiOutlinedInput-root.Mui-error
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #ef4444;
+}
+
+.toyo-common-input .MuiOutlinedInput-root.Mui-disabled {
+  background: #eff4f8;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toyo-common-input .MuiOutlinedInput-root {
+    transition: none;
+    transform: none;
+  }
+}
